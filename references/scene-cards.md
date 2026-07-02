@@ -102,9 +102,9 @@
 ## 🏷️ 品牌规范引用
 
 - 所有颜色、字体、禁忌遵守 `brand-dna.md`
-- 头像文件：`assets/avatar.jpg`
-- 署名固定为：「Esther不二」
-- 品牌三色比例：蓝6 : 黄3 : 红1
+- 头像源文件：`assets/avatar.jpg`（HTML内用相对路径 `avatar.jpg` 引用，交付时复制到输出HTML同目录）
+- 署名固定为你在 `template-cards.html` 中配置的作者名（默认「Esther不二」）
+- 品牌三色比例：主色6 : 强调3 : 点缀1
 - 背景主色：奶白 `#fefcf6` / 深奶 `#faf6eb`，深色面板用 `#1A1A2E`
 
 ---

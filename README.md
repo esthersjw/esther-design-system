@@ -4,7 +4,7 @@
 
 把审美写成操作手册，AI 每次帮你做页面时必须翻这本手册，不能自由发挥。**限制 AI 的自由度 = 保证输出质量。**
 
-> ⚠️ **使用前请先完成 `brand-dna.md` 的配置：** 替换品牌色为你自己的、放入你自己的头像。
+> ⚠️ **使用前请先完成 `brand-dna.md` 的配置：** 默认品牌色可直接使用，如需替换成你自己的请同步修改模板变量；并放入你自己的头像。
 
 ---
 
@@ -72,7 +72,7 @@ assets/template-*.html(起点 - 从模板改,不从零写)
 ## 文件结构
 
 ```
-personal-design-system/
+esther-design-system/
 ├── SKILL.md                    ← 7步工作流(大脑)
 ├── brand-dna.md                ← 品牌基因:颜色/字体/气质/禁忌(需配置)
 ├── assets/                     ← 模板骨架(起点)
@@ -81,7 +81,7 @@ personal-design-system/
 │   ├── template-app.html           App型模板
 │   ├── template-cards.html         小红书卡片模板
 │   ├── html2canvas.min.js          卡片导出依赖
-│   └── avatar.jpg                  ← 你的头像(需替换)
+│   └── avatar.jpg                  ← 你的头像(需自行放入,仓库未附带)
 └── references/                 ← 规则和零件(知识库)
     ├── layouts.md                  15种布局模式(附完整代码)
     ├── components.md               组件库(30+组件,完整HTML+CSS)
@@ -112,7 +112,7 @@ AI 每次做设计必须按这个顺序走：
 
 ## 品牌基因速览
 
-### 三色（示例，请在brand-dna.md中替换为你自己的）
+### 三色（默认配色，可在brand-dna.md中替换为你自己的）
 
 | 颜色 | 色值 | 比例 |
 |------|------|------|
@@ -159,9 +159,10 @@ AI 每次做设计必须按这个顺序走：
 ## 怎么用
 
 1. Fork 或克隆本仓库
-2. 打开 `brand-dna.md`，把品牌色替换成你自己的
-3. 放入你的头像 `assets/avatar.jpg`
-4. 把仓库链接发给你的 AI Agent，跟它说：
+2. 放入你的头像 `assets/avatar.jpg`
+3. （可选）打开 `brand-dna.md`，把默认品牌色替换成你自己的，并同步修改 `assets/template-*.html` 里 `:root` 的变量
+4. 把 `assets/template-cards.html` 中的作者名替换成你自己的
+5. 把仓库链接发给你的 AI Agent，跟它说：
 
 > 帮我读这个设计系统，以后做页面按这个规范来。
 
