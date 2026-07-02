@@ -77,7 +77,7 @@
 - 金句（oversized引号装饰 `"` ，Fraunces 200px，opacity 0.15）
 - 圆形头像 + 署名「Esther不二」
 - CTA：「关注 Esther不二」
-- 一行小字：`AI时代的个人品牌实验 | 用AI让生活变好`
+- 一行小字：`在AI时代认真生活的女生｜INTJ / 跟Agent搭档的第1年`
 - 底部品牌三色装饰条
 
 ---
