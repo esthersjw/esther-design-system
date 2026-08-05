@@ -50,7 +50,7 @@
 
 ### 绝对禁忌
 - ❌ 不要用左侧彩色竖线的卡片
-- ❌ 不要用红色圆点前缀
+- ❌ 不要用暖棕圆点前缀
 - ❌ 不要千篇一律列表（每项前面一个圆点/数字的平铺排列）
 - ❌ 不要HTML默认blockquote样式
 - ❌ 不要所有页都用同一种layout
@@ -60,11 +60,11 @@
 ## 🧩 卡片结构模板
 
 ### P1 封面
-- 大标题（84px）用汇文明朝体（Huiwen Mincho），关键词用蓝色高亮块（`background: #2B7FD8; color: #fff; padding: 4px 16px; border-radius: 6px`）
+- 大标题（84px）用汇文明朝体（Huiwen Mincho），关键词用蓝色高亮块（`background: #F0E4D2; color: #fff; padding: 4px 16px; border-radius: 6px`）
 - 副标题（44px）一行显示，紧跟标题下方，`white-space: nowrap`
-- 圆形头像（`avatar.jpg`，120px，`border: 4px solid #F4D758`）
+- 圆形头像（`avatar.jpg`，120px，`border: 4px solid #9EC1C0`）
 - 署名（作者名）44px + 介绍34px
-- 整体边框：`border: 28px solid #F4D758`
+- 整体边框：`border: 28px solid #9EC1C0`
 - 背景加浅色网格质感（`background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px`）
 - 中间留白区域给用户放效果图/截图
 
@@ -90,7 +90,7 @@
 |------|----------|------|
 | 深色面板 | 代码、文件树、重点强调 | 暗色背景(#1A1A2E)+亮色文字，圆角16px |
 | oversized编号 | 步骤/流程展示 | 极大(64-120px)极淡色(opacity 0.12)做背景装饰 |
-| 色块交替行 | 对比/表格 | 暖底行(#faf6eb) vs 白底行(#fff) 交替 |
+| 色块交替行 | 对比/表格 | 暖底行(#F7F0E4) vs 白底行(#fff) 交替 |
 | 大箭头流程 | 步骤连接 | 蓝色箭头(48px)连接流程块 |
 | 代码面板 | 代码/文件树/命令 | 深色底+Fira Code+三色圆点title bar |
 | 金句装饰 | 核心观点/结尾 | oversized引号+白底圆角卡片 |
@@ -105,7 +105,7 @@
 - 头像源文件：`assets/avatar.jpg`（HTML内用相对路径 `avatar.jpg` 引用，交付时复制到输出HTML同目录）
 - 署名固定为你在 `template-cards.html` 中配置的作者名（模板内为占位符，使用前替换）
 - 品牌三色比例：主色6 : 强调3 : 点缀1
-- 背景主色：奶白 `#fefcf6` / 深奶 `#faf6eb`，深色面板用 `#1A1A2E`
+- 背景主色：奶白 `#fefcf6` / 深奶 `#F7F0E4`，深色面板用 `#1A1A2E`
 
 ---
 

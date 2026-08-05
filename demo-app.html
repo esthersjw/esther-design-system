@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
   <style>
     /* === CSS变量 === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
+    :root { --_yu-ds: "yu-v1";
+      --pear: #F0E4D2;
+      --blue: #9EC1C0;
+      --brown: #B38B6D;
       --cream: #fefcf6;
       --ink: #1A1A2E;
       --ink-light: #4A4A5A;
@@ -32,7 +32,7 @@
     }
 
     ::selection {
-      background: var(--yellow);
+      background: var(--blue);
       color: var(--ink);
     }
 
@@ -44,7 +44,7 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: var(--blue);
+      background: var(--pear);
       z-index: 9999;
     }
     body::after {
@@ -54,7 +54,7 @@
       left: 0;
       width: 33.3%;
       height: 2px;
-      background: var(--yellow);
+      background: var(--blue);
       z-index: 9999;
     }
     .tricolor-red {
@@ -63,7 +63,7 @@
       right: 0;
       width: 33.3%;
       height: 2px;
-      background: var(--red);
+      background: var(--brown);
       z-index: 9999;
       pointer-events: none;
     }
@@ -109,15 +109,15 @@
     }
 
     .btn-icon:hover {
-      border-color: var(--blue);
-      color: var(--blue);
+      border-color: var(--ink);
+      color: var(--ink);
     }
 
     .avatar {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       display: flex;
       align-items: center;
@@ -154,8 +154,8 @@
     }
 
     .tab.active {
-      border-bottom-color: var(--blue);
-      color: var(--blue);
+      border-bottom-color: var(--ink);
+      color: var(--ink);
       font-weight: 600;
     }
 
@@ -193,9 +193,9 @@
       line-height: 1.2;
     }
 
-    .stat-card .stat-number.blue { color: var(--blue); }
+    .stat-card .stat-number.blue { color: var(--ink); }
     .stat-card .stat-number.yellow { color: #c5a800; }
-    .stat-card .stat-number.red { color: var(--red); }
+    .stat-card .stat-number.red { color: var(--brown); }
 
     .stat-card .stat-label {
       font-size: 0.8rem;
@@ -240,19 +240,19 @@
       padding: 2px 8px;
       border-radius: 8px;
       font-size: 0.7rem;
-      background: rgba(43,127,216,0.1);
-      color: var(--blue);
+      background: rgba(240,228,210,0.1);
+      color: var(--ink);
       margin-bottom: 0.5rem;
     }
 
     .card-badge.yellow {
-      background: rgba(244,215,88,0.2);
+      background: rgba(158,193,192,0.2);
       color: #9a8400;
     }
 
     .card-badge.red {
-      background: rgba(232,74,95,0.1);
-      color: var(--red);
+      background: rgba(179,139,109,0.1);
+      color: var(--brown);
     }
 
     .card-badge.green {
@@ -289,8 +289,8 @@
     }
 
     .card-list .check.done {
-      background: var(--blue);
-      border-color: var(--blue);
+      background: var(--pear);
+      border-color: var(--ink);
       position: relative;
     }
 
@@ -322,12 +322,12 @@
     .progress-bar .fill {
       height: 100%;
       border-radius: 3px;
-      background: var(--blue);
+      background: var(--pear);
       transition: width .3s;
     }
 
-    .progress-bar .fill.yellow { background: var(--yellow); }
-    .progress-bar .fill.red { background: var(--red); }
+    .progress-bar .fill.yellow { background: var(--blue); }
+    .progress-bar .fill.red { background: var(--brown); }
 
     .progress-label {
       display: flex;
@@ -370,7 +370,7 @@
       justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
-      background: rgba(43,127,216,0.08);
+      background: rgba(240,228,210,0.08);
     }
 
     .list-item-body {
@@ -429,13 +429,13 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--pear);
       flex-shrink: 0;
       margin-top: 4px;
     }
 
-    .timeline-dot.yellow { background: var(--yellow); }
-    .timeline-dot.red { background: var(--red); }
+    .timeline-dot.yellow { background: var(--blue); }
+    .timeline-dot.red { background: var(--brown); }
 
     .timeline-body {
       flex: 1;
@@ -530,13 +530,13 @@
 
     .app-input:focus {
       outline: none;
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(43,127,216,0.1);
+      border-color: var(--ink);
+      box-shadow: 0 0 0 3px rgba(240,228,210,0.1);
     }
 
     /* === 按钮 === */
     .btn-primary {
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -655,10 +655,10 @@
           <span class="card-badge green">笔记</span>
           <h3>最近笔记</h3>
           <ul class="card-list">
-            <li><span style="color: var(--blue);">📝</span> 用户访谈总结 — 今天</li>
-            <li><span style="color: var(--blue);">📝</span> 竞品分析报告 — 昨天</li>
-            <li><span style="color: var(--blue);">📝</span> Q3 规划草案 — 周一</li>
-            <li><span style="color: var(--blue);">📝</span> 设计系统规范 v2 — 周一</li>
+            <li><span style="color: var(--ink);">📝</span> 用户访谈总结 — 今天</li>
+            <li><span style="color: var(--ink);">📝</span> 竞品分析报告 — 昨天</li>
+            <li><span style="color: var(--ink);">📝</span> Q3 规划草案 — 周一</li>
+            <li><span style="color: var(--ink);">📝</span> 设计系统规范 v2 — 周一</li>
           </ul>
         </div>
 
@@ -668,15 +668,15 @@
           <h3>即将到期</h3>
           <ul class="card-list">
             <li>
-              <span style="color: var(--red); font-size: 0.8rem;">●</span>
+              <span style="color: var(--brown); font-size: 0.8rem;">●</span>
               <span>提交季度报告 — <strong>明天</strong></span>
             </li>
             <li>
-              <span style="color: var(--red); font-size: 0.8rem;">●</span>
+              <span style="color: var(--brown); font-size: 0.8rem;">●</span>
               <span>更新落地页文案 — 后天</span>
             </li>
             <li>
-              <span style="color: var(--yellow); font-size: 0.8rem;">●</span>
+              <span style="color: var(--blue); font-size: 0.8rem;">●</span>
               <span>产品Demo录制 — 周五</span>
             </li>
           </ul>
@@ -895,7 +895,7 @@
 
   <!-- ====== Footer ====== -->
   <footer class="app-footer">
-    Esther Design System · App Demo · 仅供展示
+    YU Design System · App Demo · 仅供展示
   </footer>
 
   <!-- ====== Modal: 新建任务 ====== -->
@@ -937,7 +937,7 @@
       if (e.target === e.currentTarget) closeModal();
     });
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- © YU YU/YU-design-system CC BY-NC 4.0 -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">yu-design-system</section>
 </body>
 </html>

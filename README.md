@@ -1,10 +1,10 @@
-# Personal Design Skill
+# YU Design System
 
 一套给 AI 看的个人品牌设计系统。
 
 把审美写成操作手册，AI 每次帮你做页面时必须翻这本手册，不能自由发挥。**限制 AI 的自由度 = 保证输出质量。**
 
-> ⚠️ **使用前请先完成 `brand-dna.md` 的配置：** 默认品牌色可直接使用，如需替换成你自己的请同步修改模板变量；并放入你自己的头像。
+> `brand-dna.md` 已配置为 YU 的品牌规范。模板和场景规则必须以它为准；头像资产位于 `assets/avatar.jpg`。
 
 ---
 
@@ -16,7 +16,7 @@
 
 信息清晰、步骤明确、有节奏的单页科普/教程。
 
-🔗 [在线预览](https://esthersjw.github.io/cola-ob-sharing/cola-ob-sharing.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/YU-design-system.html)
 
 ---
 
@@ -24,7 +24,7 @@
 
 把审美写成操作手册——从纠正AI到做出自己的Design Skill的完整过程。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-readme-tutorial.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/demo-readme-tutorial.html)
 
 ---
 
@@ -32,7 +32,7 @@
 
 视觉冲击、深浅面板交替、强节奏感的活动邀请页。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-landing.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/demo-landing.html)
 
 ---
 
@@ -40,7 +40,7 @@
 
 功能优先、交互感、信息密度高的应用型页面。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-app.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/demo-app.html)
 
 ---
 
@@ -48,7 +48,7 @@
 
 3:4 比例、字大、手机可读、一键导出 PNG 的图文卡片。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-cards.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/demo-cards.html)
 
 ---
 
@@ -56,7 +56,7 @@
 
 杂志编号风：全内联样式 + section 标签，复制粘贴进微信公众号编辑器即可。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/assets/demo-wechat.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/assets/demo-wechat.html)
 
 ---
 
@@ -64,7 +64,7 @@
 
 16种经过验证的布局模式一览。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-layouts.html)
+🔗 [在线预览](https://YU.github.io/YU-design-system/demo-layouts.html)
 
 ---
 
@@ -72,7 +72,7 @@
 
 51个经过验证的可复用组件。
 
-🔗 [组件库预览](https://esthersjw.github.io/esther-design-system/components-preview.html)
+🔗 [组件库预览](https://YU.github.io/YU-design-system/components-preview.html)
 
 ---
 
@@ -96,7 +96,7 @@ assets/template-*.html(起点 - 从模板改,不从零写)
 ## 文件结构
 
 ```
-esther-design-system/
+YU-design-system/
 ├── SKILL.md                    ← 7步工作流(大脑)
 ├── brand-dna.md                ← 品牌基因:颜色/字体/气质/禁忌(需配置)
 ├── assets/                     ← 模板骨架(起点)
@@ -105,8 +105,16 @@ esther-design-system/
 │   ├── template-app.html           App型模板
 │   ├── template-cards.html         小红书卡片模板
 │   ├── html2canvas.min.js          卡片导出依赖
-│   ├── avatar-placeholder.svg      占位头像(可替换为你自己的 avatar.jpg)
-│   └── avatar.jpg                  ← 你的头像(需自行放入,仓库未附带)
+│   ├── avatar.jpg                  ← YU 默认头像（可用真人头像同名覆盖）
+│   ├── avatar.png                  ← YU 默认头像 PNG 版
+│   ├── ip/                         ← YU Q版 IP 形象动作库
+│   │   ├── halfbody-wave.png
+│   │   ├── halfbody-peace.png
+│   │   ├── fullbody-thinking.png
+│   │   ├── fullbody-sitting.png
+│   │   ├── fullbody-running.png
+│   │   └── fullbody-notebook.png
+│   └── avatar-placeholder.svg      ← 通用占位头像（可选）
 └── references/                 ← 规则和零件(知识库)
     ├── layouts.md                  16种布局模式(附完整代码)
     ├── components.md               组件库(51组件,完整HTML+CSS)
@@ -142,9 +150,9 @@ AI 每次做设计必须按这个顺序走：
 
 | 颜色 | 色值 | 比例 |
 |------|------|------|
-| 主色 | `#2B7FD8` | 60% |
-| 强调色 | `#F4D758` | 30% |
-| 点缀色 | `#E84A5F` | 10% |
+| 主色 | `#F0E4D2` | 60% |
+| 强调色 | `#9EC1C0` | 30% |
+| 点缀色 | `#B38B6D` | 10% |
 
 ### 字体
 
@@ -185,9 +193,9 @@ AI 每次做设计必须按这个顺序走：
 ## 怎么用
 
 1. Fork 或克隆本仓库
-2. 放入你的头像 `assets/avatar.jpg`
-3. （可选）打开 `brand-dna.md`，把默认品牌色替换成你自己的，并同步修改 `assets/template-*.html` 里 `:root` 的变量。注意：公众号模板（`template-wechat.html`）全部是内联样式，没有 CSS 变量，需要手动搜索替换色值。快捷方法：在所有模板文件中搜索 `#2B7FD8` 替换为你的主色，`#F4D758` 替换为你的强调色，`#E84A5F` 替换为你的点缀色
-4. 把 `assets/template-cards.html` 中的作者名替换成你自己的
+2. 默认使用 `assets/avatar.jpg`；如要使用真人头像，可用同名正方形照片覆盖
+3. 以 `brand-dna.md` 为唯一品牌依据。若未来更换色板，请同步修改所有模板变量和公众号模板中的内联色值
+4. 在 `assets/template-cards.html` 中填写具体作者名、账号与内容信息
 5. 把仓库链接发给你的 AI Agent，跟它说：
 
 > 帮我读这个设计系统，以后做页面按这个规范来。
@@ -199,7 +207,7 @@ AI 每次做设计必须按这个顺序走：
 ## Credits
 
 - 方法论灵感来源于 [归藏](https://github.com/guizang) 的 PPT Skill——“限制AI的自由度 = 保证输出质量”这个核心思路参考了他的设计
-- Built with [Cola](https://colaos.ai) — the first OS with a soul
+- 品牌系统原型来自 [ESTHER不二的 Esther Design System](https://github.com/esthersjw/esther-design-system)，YU 版本的适配说明见 `CREDITS.md`
 
 ---
 
@@ -210,6 +218,6 @@ AI 每次做设计必须按这个顺序走：
 本仓库采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
 
 - ✅ 可自由使用、修改、分享
-- ✅ 必须署名：ESTHER不二 (esthersjw)
+- ✅ 必须保留对原作者 ESTHER不二（esthersjw）的署名；详见 `CREDITS.md`
 - ❌ 禁止商用
 - 🔄 修改后必须以相同协议分享

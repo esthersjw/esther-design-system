@@ -6,15 +6,15 @@
   <title>Layout Playground · 16种布局模式预览</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
+    :root { --_yu-ds: "yu-v1";
+      --pear: #F0E4D2;
+      --blue: #9EC1C0;
+      --brown: #B38B6D;
       --cream: #fefcf6;
       --ink: #1A1A2E;
       --ink-light: #4a4a5a;
       --ink-faint: #8a8a9a;
-      --preview-bg: #FFF8E1;
+      --preview-bg: #F7F0E4;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,7 +43,7 @@
       display: block;
       width: 36px;
       height: 4px;
-      background: var(--blue);
+      background: var(--pear);
       border-radius: 2px;
     }
     .top-nav::after {
@@ -51,7 +51,7 @@
       display: block;
       width: 24px;
       height: 4px;
-      background: var(--yellow);
+      background: var(--blue);
       border-radius: 2px;
       margin-left: -8px;
     }
@@ -92,12 +92,12 @@
       font-size: 1.2rem;
       font-weight: 700;
       display: inline;
-      background: linear-gradient(transparent 60%, #F4D758 60%);
+      background: linear-gradient(transparent 60%, #9EC1C0 60%);
       padding: 0 4px;
     }
     .layout-header h2 .num {
       font-family: 'Fraunces', serif;
-      color: var(--blue);
+      color: var(--ink);
       margin-right: 6px;
     }
 
@@ -107,7 +107,7 @@
       border-radius: 16px;
       padding: clamp(1.5rem, 3vw, 2.5rem);
       overflow: hidden;
-      border: 1px solid rgba(244,215,88,0.3);
+      border: 1px solid rgba(158,193,192,0.3);
     }
 
     /* === Scene Tag === */
@@ -122,7 +122,7 @@
     .scene-tag::before {
       content: '适用';
       font-size: 0.7rem;
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       padding: 2px 6px;
       border-radius: 3px;
@@ -151,13 +151,13 @@
       width: 50%;
     }
     .ph-img {
-      background: rgba(43,127,216,0.1);
+      background: rgba(240,228,210,0.1);
       border-radius: 8px;
       min-height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--blue);
+      color: var(--ink);
       font-size: 0.7rem;
       font-weight: 600;
       opacity: 0.6;
@@ -166,7 +166,7 @@
       font-size: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: var(--blue);
+      color: var(--ink);
       font-weight: 600;
       margin-bottom: 6px;
     }
@@ -190,14 +190,14 @@
       gap: 24px;
     }
     .mini-sticky .side {
-      border-right: 2px solid rgba(43,127,216,0.15);
+      border-right: 2px solid rgba(240,228,210,0.15);
       padding-right: 16px;
     }
     .mini-sticky .side .num {
       font-family: 'Fraunces', serif;
       font-size: 2rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.2);
+      color: rgba(240,228,210,0.2);
     }
 
     /* 3. 三等分卡片 */
@@ -215,7 +215,7 @@
     .mini-grid3 .card-icon {
       width: 28px; height: 28px;
       border-radius: 6px;
-      background: rgba(43,127,216,0.12);
+      background: rgba(240,228,210,0.12);
       margin-bottom: 8px;
     }
 
@@ -230,7 +230,7 @@
       left: 16px;
       top: 20px; bottom: 20px;
       width: 2px;
-      border-left: none; background: var(--yellow); width: 2px;
+      border-left: none; background: var(--blue); width: 2px;
     }
     .mini-vstep .step {
       position: relative;
@@ -242,7 +242,7 @@
       left: -40px;
       width: 32px; height: 32px;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       display: flex;
       align-items: center;
@@ -262,7 +262,7 @@
       left: 50%;
       top: 0; bottom: 0;
       width: 2px;
-      background: rgba(43,127,216,0.15);
+      background: rgba(240,228,210,0.15);
     }
     .mini-timeline-center .item {
       display: grid;
@@ -282,7 +282,7 @@
 
     /* 6. 全宽深色面板 */
     .mini-dark {
-      background: #151821;
+      background: #1A1A2E;
       color: #e2e8f0;
       border-radius: 12px;
       padding: 2rem;
@@ -295,8 +295,8 @@
       font-style: italic;
       line-height: 1.8;
     }
-    .mini-dark blockquote::before { content: '"'; color: var(--yellow); }
-    .mini-dark blockquote::after { content: '"'; color: var(--yellow); }
+    .mini-dark blockquote::before { content: '"'; color: var(--blue); }
+    .mini-dark blockquote::after { content: '"'; color: var(--blue); }
 
     /* 7. 横向Step */
     .mini-hstep {
@@ -312,13 +312,13 @@
       top: 20px;
       left: 20px; right: 20px;
       height: 3px;
-      background: var(--yellow);
+      background: var(--blue);
       border-radius: 2px;
     }
     .mini-hstep .step-dot {
       width: 40px; height: 40px;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       display: inline-flex;
       align-items: center;
@@ -363,7 +363,7 @@
     .mini-hero-vert .avatar {
       width: 64px; height: 64px;
       border-radius: 50%;
-      background: rgba(43,127,216,0.12);
+      background: rgba(240,228,210,0.12);
       margin-bottom: 12px;
       display: flex;
       align-items: center;
@@ -377,8 +377,8 @@
     }
     .mini-hero-vert .tag {
       font-size: 0.65rem;
-      background: rgba(43,127,216,0.08);
-      color: var(--blue);
+      background: rgba(240,228,210,0.08);
+      color: var(--ink);
       padding: 3px 8px;
       border-radius: 10px;
     }
@@ -403,7 +403,7 @@
 
     /* 11. 品牌色面板 */
     .mini-accent {
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       border-radius: 12px;
       padding: 2rem;
@@ -431,7 +431,7 @@
       height: 4px;
     }
     .mini-hscroll::-webkit-scrollbar-thumb {
-      background: var(--yellow);
+      background: var(--blue);
       border-radius: 2px;
     }
     .mini-hscroll .card {
@@ -445,7 +445,7 @@
     .mini-hscroll .card .year {
       font-family: 'Fraunces', serif;
       font-size: 1.2rem;
-      color: var(--blue);
+      color: var(--ink);
       opacity: 0.6;
     }
 
@@ -467,10 +467,10 @@
     .mini-split .left h3 {
       font-family: 'Noto Serif SC', serif;
       font-size: 1rem;
-      color: var(--red);
+      color: var(--brown);
     }
     .mini-split .right {
-      background: rgba(244,215,88,0.15);
+      background: rgba(158,193,192,0.15);
       padding: 1.5rem;
       display: flex;
       align-items: center;
@@ -489,7 +489,7 @@
       content: '×';
       position: absolute;
       left: 0;
-      color: var(--red);
+      color: var(--brown);
       font-weight: 700;
     }
 
@@ -514,8 +514,8 @@
       color: var(--ink-faint);
     }
     .mini-tab .tab-btn.active {
-      border-bottom-color: var(--blue);
-      color: var(--blue);
+      border-bottom-color: var(--ink);
+      color: var(--ink);
       font-weight: 600;
     }
     .mini-tab .tab-panel {
@@ -529,7 +529,7 @@
     .mini-canvas {
       position: relative;
       height: 200px;
-      background-image: radial-gradient(circle, rgba(43,127,216,0.13) 1.2px, transparent 1.2px);
+      background-image: radial-gradient(circle, rgba(240,228,210,0.13) 1.2px, transparent 1.2px);
       background-size: 20px 20px;
       border-radius: 12px;
       overflow: hidden;
@@ -543,9 +543,9 @@
       font-size: 0.7rem;
     }
     .mini-canvas .fc1 { top: 20px; left: 30px; }
-    .mini-canvas .fc2 { top: 80px; left: 200px; border-top: 3px solid var(--blue); }
-    .mini-canvas .fc3 { top: 40px; right: 40px; border-top: 3px solid var(--yellow); }
-    .mini-canvas .fc4 { bottom: 30px; left: 100px; border-top: 3px solid var(--red); }
+    .mini-canvas .fc2 { top: 80px; left: 200px; border-top: 3px solid var(--pear); }
+    .mini-canvas .fc3 { top: 40px; right: 40px; border-top: 3px solid var(--blue); }
+    .mini-canvas .fc4 { bottom: 30px; left: 100px; border-top: 3px solid var(--brown); }
 
     /* 16. Sticky杂志 */
     .mini-sticky-mag {
@@ -568,7 +568,7 @@
       font-family: 'Fraunces', serif;
       font-size: 1rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.15);
+      color: rgba(240,228,210,0.15);
       min-width: 24px;
     }
     .mini-sticky-mag .sidebar ul li.active {
@@ -576,7 +576,7 @@
       font-weight: 600;
     }
     .mini-sticky-mag .sidebar ul li.active .snum {
-      color: var(--blue);
+      color: var(--ink);
     }
     .mini-sticky-mag .steps-col .step-card {
       background: #fff;
@@ -588,7 +588,7 @@
     .mini-sticky-mag .steps-col .step-card:last-child { margin-bottom: 0; }
     .mini-sticky-mag .steps-col .step-card .img-area {
       height: 50px;
-      background: rgba(43,127,216,0.06);
+      background: rgba(240,228,210,0.06);
     }
     .mini-sticky-mag .steps-col .step-card .card-body {
       padding: 10px 14px;
@@ -600,13 +600,13 @@
       font-family: 'Fraunces', serif;
       font-size: 1.5rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.15);
+      color: rgba(240,228,210,0.15);
     }
     .mini-sticky-mag .steps-col .step-card:nth-child(2) .card-body .snum {
-      color: rgba(244,215,88,0.4);
+      color: rgba(158,193,192,0.4);
     }
     .mini-sticky-mag .steps-col .step-card:nth-child(3) .card-body .snum {
-      color: rgba(232,74,95,0.2);
+      color: rgba(179,139,109,0.2);
     }
 
     /* === Responsive === */
@@ -627,9 +627,9 @@
       height: 4px;
       display: flex;
     }
-    .tri-bar span:nth-child(1) { flex: 3; background: var(--blue); }
-    .tri-bar span:nth-child(2) { flex: 2; background: var(--yellow); }
-    .tri-bar span:nth-child(3) { flex: 1; background: var(--red); }
+    .tri-bar span:nth-child(1) { flex: 3; background: var(--pear); }
+    .tri-bar span:nth-child(2) { flex: 2; background: var(--blue); }
+    .tri-bar span:nth-child(3) { flex: 1; background: var(--brown); }
   </style>
 </head>
 <body>
@@ -701,13 +701,13 @@
           <div class="ph-text xshort"></div>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(244,215,88,0.2)"></div>
+          <div class="card-icon" style="background:rgba(158,193,192,0.2)"></div>
           <div class="ph-heading" style="width:70%"></div>
           <div class="ph-text medium"></div>
           <div class="ph-text short"></div>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(232,74,95,0.12)"></div>
+          <div class="card-icon" style="background:rgba(179,139,109,0.12)"></div>
           <div class="ph-heading" style="width:50%"></div>
           <div class="ph-text short"></div>
           <div class="ph-text xshort"></div>
@@ -730,12 +730,12 @@
           <div class="ph-text medium"></div>
         </div>
         <div class="step">
-          <span class="dot" style="background:var(--yellow); color:var(--ink)">2</span>
+          <span class="dot" style="background:var(--blue); color:var(--ink)">2</span>
           <div class="ph-heading" style="width:50%"></div>
           <div class="ph-text short"></div>
         </div>
         <div class="step">
-          <span class="dot" style="background:var(--red)">3</span>
+          <span class="dot" style="background:var(--brown)">3</span>
           <div class="ph-heading" style="width:35%"></div>
           <div class="ph-text medium"></div>
         </div>
@@ -1018,7 +1018,7 @@
 <!-- Bottom tri-color bar -->
 <div class="tri-bar"><span></span><span></span><span></span></div>
 
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- © YU YU/YU-design-system CC BY-NC 4.0 -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">yu-design-system</section>
 </body>
 </html>

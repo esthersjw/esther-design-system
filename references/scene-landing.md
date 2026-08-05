@@ -19,16 +19,16 @@
 继承 brand-dna.md 的三色体系，额外规则：
 
 ### 合作品牌色扩展
-当页面涉及合作产品/品牌时，可引入第四色替代红色的点缀位：
-- Cola合作: `#F1752D`（橙色），替代红色作为强调色
+当页面涉及合作产品/品牌时，可引入第四色替代暖棕的点缀位：
+- YU 合作: `#F1752D`（橙色），替代暖棕作为强调色
 - 金橙: `#F7A946`（偏金），用于slogan/时间标识
-- **规则**: 第四色只替代红色位置，不替代蓝/黄主色
+- **规则**: 第四色只替代暖棕位置，不替代蓝/黄主色
 
 ### 暗色面板色值
-- 标准暗底: `#151821`
+- 标准暗底: `#1A1A2E`
 - 深色底: `#0d1117`
-- 品牌蓝底: `var(--blue)` + 白字
-- 品牌黄底: `var(--yellow)` + 墨色字
+- 梨黄底: `var(--pear)` + 白字
+- 品牌黄底: `var(--blue)` + 墨色字
 
 ---
 
@@ -83,7 +83,7 @@ Landing页面高频使用的组件：
   align-items: center;
   gap: 8px;
   padding: 16px 36px;
-  background: var(--blue, #2B7FD8);
+  background: var(--pear, #F0E4D2);
   color: #fff;
   border-radius: 12px;
   text-decoration: none;
@@ -93,16 +93,16 @@ Landing页面高频使用的组件：
 }
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+  box-shadow: 0 8px 24px rgba(240,228,210,0.3);
 }
 
 /* 黄色变体（用于深色背景上） */
-.cta-button--yellow {
-  background: var(--yellow, #F4D758);
+.cta-button--blue {
+  background: var(--blue, #9EC1C0);
   color: var(--ink, #1A1A2E);
 }
-.cta-button--yellow:hover {
-  box-shadow: 0 8px 24px rgba(244,215,88,0.3);
+.cta-button--blue:hover {
+  box-shadow: 0 8px 24px rgba(158,193,192,0.3);
 }
 ```
 

@@ -9,18 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     /* === CSS变量 === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
+    :root { --_yu-ds: "yu-v1";
+      --pear: #F0E4D2;
+      --pear-deep: #D8C9B6;
+      --blue: #9EC1C0;
+      --blue-soft: #DCE9E8;
+      --brown: #B38B6D;
       --cream: #fefcf6;
-      --cream-dark: #faf6eb;
+      --cream-dark: #F7F0E4;
       --ink: #1A1A2E;
       --ink-light: #4A4A5A;
       --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
+      --dark-panel: #1A1A2E;
       /* 合作品牌色（按需启用） */
       /* --partner: #F1752D; */
     }
@@ -36,7 +36,7 @@
     }
 
     ::selection {
-      background: var(--yellow);
+      background: var(--blue);
       color: var(--ink);
     }
 
@@ -93,7 +93,7 @@
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--blue);
+      color: var(--ink);
       opacity: 0.3;
       display: block;
       margin-bottom: 0.25rem;
@@ -125,9 +125,9 @@
       top: 0; left: 0; right: 0;
       height: 4px;
     }
-    .chair-card:nth-child(1)::before { background: var(--blue); }
-    .chair-card:nth-child(2)::before { background: var(--yellow); }
-    .chair-card:nth-child(3)::before { background: var(--red); }
+    .chair-card:nth-child(1)::before { background: var(--pear); }
+    .chair-card:nth-child(2)::before { background: var(--blue); }
+    .chair-card:nth-child(3)::before { background: var(--brown); }
 
     /* === 深色面板 === */
     .dark-section {
@@ -146,7 +146,7 @@
       text-align: center;
     }
     .dark-section .quote-text em {
-      color: var(--yellow);
+      color: var(--blue);
       font-style: normal;
     }
 
@@ -155,7 +155,7 @@
       padding: 36px 40px;
       background: var(--cream);
       border-radius: 16px;
-      border: 2px solid var(--yellow);
+      border: 2px solid var(--blue);
       position: relative;
       max-width: 720px;
       margin: 0 auto;
@@ -164,7 +164,7 @@
       content: '"';
       font-family: 'Fraunces', serif;
       font-size: 5rem;
-      color: var(--yellow);
+      color: var(--blue);
       position: absolute;
       top: -10px; left: 20px;
       opacity: 0.5;
@@ -197,7 +197,7 @@
       align-items: center;
       gap: 8px;
       padding: 16px 36px;
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       border-radius: 12px;
       text-decoration: none;
@@ -207,7 +207,7 @@
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+      box-shadow: 0 8px 24px rgba(240,228,210,0.3);
     }
 
     /* === Scroll Reveal === */
@@ -304,7 +304,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- © YU YU/YU-design-system CC BY-NC 4.0 -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">yu-design-system</section>
 </body>
 </html>

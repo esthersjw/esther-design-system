@@ -74,7 +74,7 @@
 }
 .magazine-card .card-aux {
   font-size: 0.7rem;
-  color: var(--blue);
+  color: var(--ink);
   margin-top: 8px;
   font-weight: 500;
 }
@@ -110,7 +110,7 @@
   font-family: 'Fraunces', serif;
   font-size: 5.5rem;
   font-weight: 900;
-  color: rgba(43, 127, 216, 0.08);
+  color: rgba(240,228,210, 0.08);
   line-height: 1;
   pointer-events: none;
 }
@@ -131,9 +131,9 @@
 
 **变体**: 编号颜色按品牌三色轮换（蓝/黄/红）
 ```css
-.number-card:nth-child(3n+1) .card-number { color: rgba(43, 127, 216, 0.08); }
-.number-card:nth-child(3n+2) .card-number { color: rgba(244, 215, 88, 0.15); }
-.number-card:nth-child(3n) .card-number { color: rgba(232, 74, 95, 0.1); }
+.number-card:nth-child(3n+1) .card-number { color: rgba(240,228,210, 0.08); }
+.number-card:nth-child(3n+2) .card-number { color: rgba(158,193,192, 0.15); }
+.number-card:nth-child(3n) .card-number { color: rgba(179,139,109, 0.1); }
 ```
 
 ---
@@ -144,7 +144,7 @@
 
 ```html
 <div class="tag-card">
-  <span class="card-pill card-pill--blue">分类标签</span>
+  <span class="card-pill card-pill--pear">分类标签</span>
   <h3 class="card-title">标题</h3>
   <p class="card-desc">描述内容</p>
 </div>
@@ -166,9 +166,9 @@
   margin-bottom: 14px;
 }
 /* pill颜色变体 */
-.tag-card .card-pill--blue { background: rgba(43,127,216,0.1); color: var(--blue); }
-.tag-card .card-pill--yellow { background: rgba(244,215,88,0.25); color: #9a8100; }
-.tag-card .card-pill--red { background: rgba(232,74,95,0.1); color: var(--red); }
+.tag-card .card-pill--pear { background: rgba(240,228,210,0.1); color: var(--ink); }
+.tag-card .card-pill--blue { background: rgba(158,193,192,0.25); color: #9a8100; }
+.tag-card .card-pill--brown { background: rgba(179,139,109,0.1); color: var(--brown); }
 .tag-card .card-title {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.05rem;
@@ -189,7 +189,7 @@
 
 ```html
 <div class="icon-card">
-  <div class="card-icon-area card-icon-area--blue">📦</div>
+  <div class="card-icon-area card-icon-area--pear">📦</div>
   <div class="card-content">
     <h3 class="card-title">标题</h3>
     <p class="card-desc">描述内容</p>
@@ -215,9 +215,9 @@
   font-size: 2.8rem;
 }
 /* icon区颜色变体 */
-.icon-card .card-icon-area--blue { background: rgba(43,127,216,0.06); }
-.icon-card .card-icon-area--yellow { background: rgba(244,215,88,0.12); }
-.icon-card .card-icon-area--red { background: rgba(232,74,95,0.06); }
+.icon-card .card-icon-area--pear { background: rgba(240,228,210,0.06); }
+.icon-card .card-icon-area--blue { background: rgba(158,193,192,0.12); }
+.icon-card .card-icon-area--brown { background: rgba(179,139,109,0.06); }
 .icon-card .card-content {
   flex: 1;
   padding: 18px 16px;
@@ -275,7 +275,7 @@
   font-family: 'Fraunces', serif;
   font-size: 5rem;
   line-height: 1;
-  color: var(--yellow);
+  color: var(--blue);
   opacity: 0.8;
 }
 .quote-editorial .quote-title {
@@ -317,7 +317,7 @@
 .quote-handwrite {
   position: relative;
   padding: 28px 24px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(240,228,210,0.25);
   border-radius: 12px;
   background: white;
 }
@@ -328,7 +328,7 @@
   font-family: 'Caveat', cursive;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--ink);
   background: var(--cream);
   padding: 0 10px;
 }
@@ -373,7 +373,7 @@
   font-weight: 900;
   margin-bottom: 12px;
   display: inline;
-  background: linear-gradient(to top, rgba(244,215,88,0.5) 45%, transparent 45%);
+  background: linear-gradient(to top, rgba(158,193,192,0.5) 45%, transparent 45%);
   line-height: 1.8;
   padding: 2px 4px;
 }
@@ -422,8 +422,8 @@
   height: 10px;
   border-radius: 50%;
 }
-.quote-terminal .dot:nth-child(1) { background: var(--red); }
-.quote-terminal .dot:nth-child(2) { background: var(--yellow); }
+.quote-terminal .dot:nth-child(1) { background: var(--brown); }
+.quote-terminal .dot:nth-child(2) { background: var(--blue); }
 .quote-terminal .dot:nth-child(3) { background: #4ade80; }
 .quote-terminal .quote-body {
   padding: 20px 24px;
@@ -468,7 +468,7 @@
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   opacity: 0.3;
   display: block;
   margin-bottom: 0.25rem;
@@ -514,20 +514,20 @@
   margin-bottom: 2rem;
 }
 .quote-minimal .quote-body .hl {
-  background: linear-gradient(transparent 60%, rgba(244,215,88,0.3) 60%);
+  background: linear-gradient(transparent 60%, rgba(158,193,192,0.3) 60%);
   padding: 0 4px;
 }
 .quote-minimal .quote-rule {
   width: 60px;
   height: 3px;
-  background: var(--yellow, #F4D758);
+  background: var(--blue, #9EC1C0);
   margin-bottom: 2rem;
 }
 .quote-minimal .quote-conclusion {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.2rem;
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   line-height: 1.7;
 }
 ```
@@ -549,7 +549,7 @@
   padding: 24px 28px;
   background: white;
   border-radius: 10px;
-  border: 1.5px dashed rgba(43, 127, 216, 0.3);
+  border: 1.5px dashed rgba(240,228,210, 0.3);
 }
 .quote-note-tag {
   position: absolute;
@@ -557,7 +557,7 @@
   left: 20px;
   font-family: 'Caveat', cursive;
   font-size: 1rem;
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   background: var(--cream, #fefcf6);
   padding: 0 8px;
   font-weight: 700;
@@ -594,7 +594,7 @@
   transform: translateY(-50%);
   width: 3px;
   height: 60%;
-  background: var(--yellow, #F4D758);
+  background: var(--blue, #9EC1C0);
   border-radius: 2px;
 }
 .quote-typo p {
@@ -754,14 +754,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(232,74,95,0.2);
+  background: rgba(179,139,109,0.2);
 }
 .code-notebook .code-tab {
   padding: 8px 16px 8px 48px;
   border-bottom: 1px solid #e8e4d9;
   font-family: 'Caveat', cursive;
   font-size: 1rem;
-  color: var(--blue);
+  color: var(--ink);
   font-weight: 700;
 }
 .code-notebook pre {
@@ -772,12 +772,12 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   margin: 0;
   padding: 16px 20px 16px 48px;
   background-image: repeating-linear-gradient(
-    transparent, transparent 31px, rgba(43,127,216,0.05) 31px, rgba(43,127,216,0.05) 32px
+    transparent, transparent 31px, rgba(240,228,210,0.05) 31px, rgba(240,228,210,0.05) 32px
   );
 }
 ```
 
-**语法高亮色**: `.kw { color: var(--blue); font-weight: 700; }` `.str { color: var(--red); }` `.cm { color: var(--ink-faint); }`
+**语法高亮色**: `.kw { color: var(--ink); font-weight: 700; }` `.str { color: var(--brown); }` `.cm { color: var(--ink-faint); }`
 
 ---
 
@@ -819,8 +819,8 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   margin: 0;
   letter-spacing: 0.5px;
 }
-.code-typewriter .kw { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
-.code-typewriter .str { color: var(--red); }
+.code-typewriter .kw { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.code-typewriter .str { color: var(--brown); }
 .code-typewriter .cm { color: var(--ink-faint); font-style: italic; }
 .code-typewriter .cursor {
   display: inline-block;
@@ -872,15 +872,15 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   color: var(--ink);
   margin: 0;
 }
-.code-clean .kw { color: var(--blue); font-weight: 600; }
+.code-clean .kw { color: var(--ink); font-weight: 600; }
 .code-clean .fn { color: #7c3aed; }
-.code-clean .str { color: var(--red); }
+.code-clean .str { color: var(--brown); }
 .code-clean .cm { color: #94a3b8; }
 .code-clean .highlight-line {
-  background: rgba(43,127,216,0.06);
+  background: rgba(240,228,210,0.06);
   margin: 0 -32px;
   padding: 0 32px;
-  border-left: 3px solid var(--blue);
+  border-left: 3px solid var(--pear);
 }
 ```
 
@@ -905,14 +905,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   padding: 36px 40px;
   background: var(--cream, #fefcf6);
   border-radius: 16px;
-  border: 2px solid var(--yellow, #F4D758);
+  border: 2px solid var(--blue, #9EC1C0);
   position: relative;
 }
 .viral-pullquote::before {
   content: '"';
   font-family: 'Fraunces', serif;
   font-size: 5rem;
-  color: var(--yellow, #F4D758);
+  color: var(--blue, #9EC1C0);
   position: absolute;
   top: -10px; left: 20px;
   opacity: 0.5;
@@ -958,13 +958,13 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   line-height: 1.6;
 }
 .chat-bubble.user {
-  background: var(--yellow, #F4D758);
+  background: var(--blue, #9EC1C0);
   color: var(--ink, #1A1A2E);
   align-self: flex-end;
   border-bottom-right-radius: 4px;
 }
 .chat-bubble.ai {
-  background: var(--blue, #2B7FD8);
+  background: var(--pear, #F0E4D2);
   color: #fefcf6;
   align-self: flex-start;
   border-bottom-left-radius: 4px;
@@ -993,7 +993,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   font-family: 'Fraunces', serif;
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   opacity: 0.15;
   line-height: 0.85;
   display: block;
@@ -1057,7 +1057,7 @@ nav.scrolled {
   position: absolute;
   bottom: -4px; left: 0; right: 0;
   height: 2px;
-  background: var(--yellow, #F4D758);
+  background: var(--blue, #9EC1C0);
   transform: scaleX(0);
   transition: transform .25s ease-out;
 }
@@ -1122,9 +1122,9 @@ nav.scrolled {
   line-height: 1;
   pointer-events: none;
 }
-.chair-number-card:nth-child(1) .chair-big-num { color: rgba(43,127,216,0.08); }
-.chair-number-card:nth-child(2) .chair-big-num { color: rgba(244,215,88,0.15); }
-.chair-number-card:nth-child(3) .chair-big-num { color: rgba(232,74,95,0.08); }
+.chair-number-card:nth-child(1) .chair-big-num { color: rgba(240,228,210,0.08); }
+.chair-number-card:nth-child(2) .chair-big-num { color: rgba(158,193,192,0.15); }
+.chair-number-card:nth-child(3) .chair-big-num { color: rgba(179,139,109,0.08); }
 .chair-number-card h3 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.1rem;
@@ -1207,7 +1207,7 @@ nav.scrolled {
   margin-top: 16px;
   font-family: 'Fira Code', monospace;
   font-size: 0.65rem;
-  color: var(--blue);
+  color: var(--ink);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1248,9 +1248,9 @@ nav.scrolled {
   position: relative;
   background: white;
 }
-.chair-dashed-card:nth-child(1) { border-color: rgba(43,127,216,0.3); }
-.chair-dashed-card:nth-child(2) { border-color: rgba(244,215,88,0.5); }
-.chair-dashed-card:nth-child(3) { border-color: rgba(232,74,95,0.3); }
+.chair-dashed-card:nth-child(1) { border-color: rgba(240,228,210,0.3); }
+.chair-dashed-card:nth-child(2) { border-color: rgba(158,193,192,0.5); }
+.chair-dashed-card:nth-child(3) { border-color: rgba(179,139,109,0.3); }
 .chair-dashed-card .chair-label {
   position: absolute;
   top: -10px;
@@ -1261,9 +1261,9 @@ nav.scrolled {
   background: var(--cream);
   padding: 0 8px;
 }
-.chair-dashed-card:nth-child(1) .chair-label { color: var(--blue); }
+.chair-dashed-card:nth-child(1) .chair-label { color: var(--ink); }
 .chair-dashed-card:nth-child(2) .chair-label { color: #9a8100; }
-.chair-dashed-card:nth-child(3) .chair-label { color: var(--red); }
+.chair-dashed-card:nth-child(3) .chair-label { color: var(--brown); }
 .chair-dashed-card h3 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.05rem;
@@ -1312,9 +1312,9 @@ nav.scrolled {
   position: relative;
   overflow: hidden;
 }
-.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(43,127,216,0.08), rgba(43,127,216,0.02)); }
-.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(244,215,88,0.15), rgba(244,215,88,0.03)); }
-.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(232,74,95,0.08), rgba(232,74,95,0.02)); }
+.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(240,228,210,0.08), rgba(240,228,210,0.02)); }
+.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(158,193,192,0.15), rgba(158,193,192,0.03)); }
+.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(179,139,109,0.08), rgba(179,139,109,0.02)); }
 .chair-gradient-card .chair-emoji {
   font-size: 2rem;
   margin-bottom: 16px;
@@ -1368,9 +1368,9 @@ nav.scrolled {
   height: 3px;
   margin-bottom: 20px;
 }
-.chair-typo-card:nth-child(1) .chair-divider { background: var(--blue); }
-.chair-typo-card:nth-child(2) .chair-divider { background: var(--yellow); }
-.chair-typo-card:nth-child(3) .chair-divider { background: var(--red); }
+.chair-typo-card:nth-child(1) .chair-divider { background: var(--pear); }
+.chair-typo-card:nth-child(2) .chair-divider { background: var(--blue); }
+.chair-typo-card:nth-child(3) .chair-divider { background: var(--brown); }
 .chair-typo-card h3 {
   font-family: 'Fraunces', serif;
   font-size: 1.3rem;
@@ -1426,7 +1426,7 @@ nav.scrolled {
   padding: 24px 32px;
   background: var(--cream, #fefcf6);
   border-radius: 14px;
-  border: 1px solid rgba(43, 127, 216, 0.1);
+  border: 1px solid rgba(240,228,210, 0.1);
 }
 .system-flow span {
   font-size: 0.9rem;
@@ -1436,7 +1436,7 @@ nav.scrolled {
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 .flow-arrow {
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   font-size: 1.2rem;
   background: transparent !important;
   box-shadow: none !important;
@@ -1505,16 +1505,16 @@ nav.scrolled {
   padding-bottom: 12px;
   border-bottom: 2px solid;
 }
-.compare-block--dont .compare-header { border-color: var(--red); }
-.compare-block--do .compare-header { border-color: var(--blue); }
+.compare-block--dont .compare-header { border-color: var(--brown); }
+.compare-block--do .compare-header { border-color: var(--ink); }
 .compare-header .compare-icon { font-size: 1.3rem; }
 .compare-header .compare-label {
   font-family: 'Fraunces', serif;
   font-size: 1rem;
   font-weight: 700;
 }
-.compare-block--dont .compare-label { color: var(--red); }
-.compare-block--do .compare-label { color: var(--blue); }
+.compare-block--dont .compare-label { color: var(--brown); }
+.compare-block--do .compare-label { color: var(--ink); }
 .compare-block ul {
   list-style: none;
   padding: 0;
@@ -1529,8 +1529,8 @@ nav.scrolled {
   position: relative;
   line-height: 1.6;
 }
-.compare-block--dont li::before { content: '×'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
-.compare-block--do li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+.compare-block--dont li::before { content: '×'; position: absolute; left: 0; color: var(--brown); font-weight: 700; }
+.compare-block--do li::before { content: '✓'; position: absolute; left: 0; color: var(--ink); font-weight: 700; }
 ```
 
 ---
@@ -1584,8 +1584,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-size: 1.4rem;
   font-weight: 700;
 }
-.compare-col-title--dont { color: var(--red); }
-.compare-col-title--do { color: var(--blue); }
+.compare-col-title--dont { color: var(--brown); }
+.compare-col-title--do { color: var(--ink); }
 .compare-handwrite .compare-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1700,8 +1700,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   position: relative;
   border-radius: 4px;
 }
-.compare-stamp-col--dont { border-color: var(--red); }
-.compare-stamp-col--do { border-color: var(--blue); }
+.compare-stamp-col--dont { border-color: var(--brown); }
+.compare-stamp-col--do { border-color: var(--ink); }
 .compare-stamp-col .compare-stamp-label {
   position: absolute;
   top: -14px;
@@ -1715,8 +1715,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   padding: 2px 16px;
   background: var(--cream);
 }
-.compare-stamp-col--dont .compare-stamp-label { color: var(--red); }
-.compare-stamp-col--do .compare-stamp-label { color: var(--blue); }
+.compare-stamp-col--dont .compare-stamp-label { color: var(--brown); }
+.compare-stamp-col--do .compare-stamp-label { color: var(--ink); }
 .compare-stamp-col ul {
   list-style: none;
   padding: 0;
@@ -1738,7 +1738,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   left: 0;
   font-weight: 700;
   font-size: 0.8rem;
-  color: var(--red);
+  color: var(--brown);
 }
 .compare-stamp-col--do li::before {
   content: '◆';
@@ -1746,7 +1746,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   left: 0;
   font-size: 0.6rem;
   top: 4px;
-  color: var(--blue);
+  color: var(--ink);
 }
 ```
 
@@ -1779,7 +1779,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .ring {
   position: absolute;
   inset: -12px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(240,228,210,0.25);
   border-radius: 50%;
   animation: heroSpin 20s linear infinite;
 }
@@ -1838,7 +1838,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .filter-tag.active {
   color: #fff;
-  background: var(--blue, #2B7FD8);
+  background: var(--pear, #F0E4D2);
 }
 .filter-tag:hover:not(.active) {
   background: rgba(0,0,0,.1);
@@ -1884,12 +1884,12 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   padding: 3px 10px;
   border-radius: 12px;
   font-size: 0.7rem;
-  background: rgba(43,127,216,0.1);
-  color: var(--blue, #2B7FD8);
+  background: rgba(240,228,210,0.1);
+  color: var(--pear, #F0E4D2);
   margin-bottom: 0.75rem;
 }
 .verdict {
-  border-left: 3px solid var(--blue, #2B7FD8);
+  border-left: 3px solid var(--pear, #F0E4D2);
   padding-left: 12px;
   font-size: 0.85rem;
   color: var(--ink-light, #4A4A5A);
@@ -1900,7 +1900,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   padding: 2px 8px;
   border-radius: 8px;
   font-size: 0.7rem;
-  background: var(--cream-dark, #faf6eb);
+  background: var(--cream-dark, #F7F0E4);
 }
 ```
 
@@ -2022,7 +2022,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  background: var(--blue, #2B7FD8);
+  background: var(--pear, #F0E4D2);
   color: #fff;
   border-radius: 12px;
   text-decoration: none;
@@ -2032,11 +2032,11 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+  box-shadow: 0 8px 24px rgba(240,228,210,0.3);
 }
 ```
 
-**变体**: 黄色CTA — `background: var(--yellow); color: var(--ink);`
+**变体**: 黄色CTA — `background: var(--blue); color: var(--ink);`
 
 ---
 
@@ -2081,14 +2081,14 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 ```css
 /* 杂志Editorial对比 */
 .section-editorial {
-  background: #faf6eb;
+  background: #F7F0E4;
   padding: clamp(80px, 12vh, 160px) 0;
 }
 .section-editorial .section-number {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   opacity: 0.3;
   display: block;
   margin-bottom: 0.25rem;
@@ -2113,7 +2113,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-family: 'Fraunces', serif;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   opacity: 0.1;
   line-height: 0.85;
   display: block;
@@ -2141,7 +2141,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-family: 'Fraunces', serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--yellow, #F4D758);
+  color: var(--blue, #9EC1C0);
   line-height: 1;
 }
 .editorial-col h4 {
@@ -2231,10 +2231,10 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--yellow, #F4D758);
+  background: var(--blue, #9EC1C0);
 }
-.dot-row:nth-child(2n) .dot-dim::before { background: var(--blue, #2B7FD8); }
-.dot-row:nth-child(3n) .dot-dim::before { background: var(--red, #E84A5F); }
+.dot-row:nth-child(2n) .dot-dim::before { background: var(--pear, #F0E4D2); }
+.dot-row:nth-child(3n) .dot-dim::before { background: var(--brown, #B38B6D); }
 .dot-val {
   font-size: 0.9rem;
   color: var(--ink, #1A1A2E);
@@ -2299,7 +2299,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ```css
 .ticket-vintage {
-  background: #faf6eb;
+  background: #F7F0E4;
   border: 2px dashed #c4b89a;
   border-radius: 4px;
   padding: 0;
@@ -2344,7 +2344,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   color: #4A4A5A;
 }
 .ticket-vintage .airline-row .badge {
-  background: var(--blue, #2B7FD8);
+  background: var(--pear, #F0E4D2);
   color: #fefcf6;
   padding: 2px 8px;
   font-size: 0.65rem;
@@ -2380,7 +2380,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   position: absolute;
 }
 .ticket-vintage .route-arrow span {
-  background: #faf6eb;
+  background: #F7F0E4;
   padding: 0 8px;
   position: relative;
   font-family: 'Fira Code', monospace;
@@ -2418,7 +2418,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-family: 'Fira Code', monospace;
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--red, #E84A5F);
+  color: var(--brown, #B38B6D);
 }
 ```
 
@@ -2495,7 +2495,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .ticket-editorial .time-divider {
   font-family: 'Fraunces', serif;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--yellow, #F4D758);
+  color: var(--blue, #9EC1C0);
   font-weight: 300;
 }
 .ticket-editorial .cities-line {
@@ -2518,7 +2518,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-left: 6px;
 }
 .ticket-editorial .arrow-editorial {
-  color: var(--blue, #2B7FD8);
+  color: var(--pear, #F0E4D2);
   font-size: 1.2rem;
 }
 .ticket-editorial .meta-strip {
@@ -2551,7 +2551,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ### §21C — 极简信息卡
 
-黑白为主+红色圆点点缀，信息紧凑。适合密集行程列表。
+黑白为主+暖棕圆点点缀，信息紧凑。适合密集行程列表。
 
 ```html
 <div class="ticket-minimal">
@@ -2603,7 +2603,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--red, #E84A5F);
+  background: var(--brown, #B38B6D);
 }
 .ticket-minimal .min-route {
   display: flex;
@@ -2807,8 +2807,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--blue);
-  border-bottom: 1.5px solid var(--yellow);
+  color: var(--ink);
+  border-bottom: 1.5px solid var(--blue);
   padding-bottom: 2px;
   margin-bottom: 16px;
 }
@@ -2839,7 +2839,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .hotel-postcard .postcard-meta span::before {
   content: '✦ ';
-  color: var(--yellow);
+  color: var(--blue);
 }
 ```
 
@@ -2942,7 +2942,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   font-family: 'Fraunces', serif;
   font-size: 1.8rem;
   font-weight: 900;
-  color: var(--blue);
+  color: var(--ink);
   line-height: 1;
   margin-bottom: 4px;
 }
@@ -3022,7 +3022,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
 }
 .news-handwrite {
   font-family: 'Caveat', cursive;
-  color: var(--red, #E84A5F);
+  color: var(--brown, #B38B6D);
   font-size: 1.3rem;
   transform: rotate(-2deg);
   margin-top: 12px;
@@ -3167,7 +3167,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   height: 1.2em;
 }
 .type-warn {
-  color: var(--red, #E84A5F);
+  color: var(--brown, #B38B6D);
   font-weight: 700;
 }
 .type-cursor {
@@ -3901,10 +3901,10 @@ function flipStack() {
 ```css
 .tl-v1 .tc .num { font-family: 'Caveat', cursive; font-size: 1rem; color: var(--ink-faint); margin-bottom: 4px; }
 .tl-v1 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 8px; }
-.tl-v1 .tc:nth-child(1) h3 { color: var(--blue); }
-.tl-v1 .tc:nth-child(2) h3 { color: var(--red); }
+.tl-v1 .tc:nth-child(1) h3 { color: var(--ink); }
+.tl-v1 .tc:nth-child(2) h3 { color: var(--brown); }
 .tl-v1 .tc:nth-child(3) h3 { color: #805AD5; }
-.tl-v1 .tc:nth-child(4) h3 { color: var(--blue-deep); }
+.tl-v1 .tc:nth-child(4) h3 { color: var(--pear-deep); }
 .tl-v1 .tc p { font-size: .9rem; color: var(--ink-light); line-height: 1.6; }
 ```
 
@@ -3915,9 +3915,9 @@ function flipStack() {
 ```css
 .tl-v2 .tc { text-align: center; padding: 28px 18px; }
 .tl-v2 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 900; display: inline; }
-.tl-v2 .tc:nth-child(1) h3 { background: linear-gradient(180deg, transparent 55%, rgba(43,127,216,.15) 55%); }
-.tl-v2 .tc:nth-child(2) h3 { background: linear-gradient(180deg, transparent 55%, rgba(244,215,88,.3) 55%); }
-.tl-v2 .tc:nth-child(3) h3 { background: linear-gradient(180deg, transparent 55%, rgba(232,74,95,.15) 55%); }
+.tl-v2 .tc:nth-child(1) h3 { background: linear-gradient(180deg, transparent 55%, rgba(240,228,210,.15) 55%); }
+.tl-v2 .tc:nth-child(2) h3 { background: linear-gradient(180deg, transparent 55%, rgba(158,193,192,.3) 55%); }
+.tl-v2 .tc:nth-child(3) h3 { background: linear-gradient(180deg, transparent 55%, rgba(179,139,109,.15) 55%); }
 .tl-v2 .tc:nth-child(4) h3 { background: linear-gradient(180deg, transparent 55%, rgba(128,90,213,.15) 55%); }
 .tl-v2 .tc p { font-size: .88rem; color: var(--ink-light); line-height: 1.6; margin-top: 10px; }
 ```
@@ -3930,9 +3930,9 @@ function flipStack() {
 .tl-v3 .tc { padding: 26px 20px; }
 .tl-v3 .tc .emoji { font-size: 2rem; margin-bottom: 10px; }
 .tl-v3 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.35rem; font-weight: 900; margin-bottom: 8px; }
-.tl-v3 .tc:nth-child(1) h3 { color: var(--blue); }
+.tl-v3 .tc:nth-child(1) h3 { color: var(--ink); }
 .tl-v3 .tc:nth-child(2) h3 { color: #d4930a; }
-.tl-v3 .tc:nth-child(3) h3 { color: var(--red); }
+.tl-v3 .tc:nth-child(3) h3 { color: var(--brown); }
 .tl-v3 .tc:nth-child(4) h3 { color: #805AD5; }
 .tl-v3 .tc p { font-size: .9rem; color: var(--ink-light); line-height: 1.6; }
 ```
@@ -3945,10 +3945,10 @@ function flipStack() {
 .tl-v5 .tc { padding: 28px 20px; position: relative; overflow: hidden; }
 .tl-v5 .tc .bg-char { position: absolute; top: -10px; right: -5px; font-family: 'Fraunces', serif; font-size: 5rem; font-weight: 900; opacity: .04; line-height: 1; pointer-events: none; }
 .tl-v5 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 8px; position: relative; }
-.tl-v5 .tc:nth-child(1) h3 { color: var(--blue); }
-.tl-v5 .tc:nth-child(2) h3 { color: var(--red); }
+.tl-v5 .tc:nth-child(1) h3 { color: var(--ink); }
+.tl-v5 .tc:nth-child(2) h3 { color: var(--brown); }
 .tl-v5 .tc:nth-child(3) h3 { color: #805AD5; }
-.tl-v5 .tc:nth-child(4) h3 { color: var(--blue-deep); }
+.tl-v5 .tc:nth-child(4) h3 { color: var(--pear-deep); }
 .tl-v5 .tc p { font-size: .95rem; color: var(--ink-light); line-height: 1.6; position: relative; font-weight: 500; }
 ```
 
@@ -3964,8 +3964,8 @@ function flipStack() {
 .ring-step .emoji { font-size: 1.5rem; margin-bottom: 4px; }
 .ring-step h4 { font-size: .9rem; font-weight: 700; }
 .ring-step .sub { font-size: .72rem; color: var(--ink-faint); }
-.ring-step::after { content: '›'; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; color: var(--yellow); font-weight: 900; }
-.ring-step:last-child::after { content: '⟳'; right: auto; left: 50%; top: auto; bottom: -18px; transform: translateX(-50%); font-size: 1.1rem; color: var(--blue); }
+.ring-step::after { content: '›'; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; color: var(--blue); font-weight: 900; }
+.ring-step:last-child::after { content: '⟳'; right: auto; left: 50%; top: auto; bottom: -18px; transform: translateX(-50%); font-size: 1.1rem; color: var(--ink); }
 ```
 
 ⚠️ 注意：移动端变竖排，去掉箭头。3-6个步骤最佳。底部加一句大字总结效果更好。
@@ -4000,11 +4000,11 @@ Your second line — keep it short
 
 **适用**: 标题高亮、成就展示、情绪表达。文字周围飘闪烁星星粒子。
 
-**颜色规则**：文字颜色和星光颜色互斥。蓝色文字配黄色+少量红色星光；黑色文字配黄色星光；黄色文字配蓝色星光。星光中红色占比不超过20%。
+**颜色规则**：文字颜色和星光颜色互斥。蓝色文字配黄色+少量暖棕星光；黑色文字配黄色星光；黄色文字配蓝色星光。星光中暖棕占比不超过20%。
 
 ```html
 <!-- data-sparkle-colors 为品牌色硬编码，品牌色如有修改需同步替换 -->
-<div class="sparkles-wrap" data-sparkle-colors="#F4D758,#F4D758,#E84A5F">
+<div class="sparkles-wrap" data-sparkle-colors="#9EC1C0,#9EC1C0,#B38B6D">
   <span class="sparkles-text">Build</span>
 </div>
 ```
@@ -4019,7 +4019,7 @@ Your second line — keep it short
   font-family: 'Noto Serif SC', serif;
   font-weight: 900;
   font-size: clamp(3rem, 8vw, 5.5rem);
-  color: var(--blue); /* 或var(--ink)，与星光互斥 */
+  color: var(--ink); /* 或var(--ink)，与星光互斥 */
   position: relative;
   z-index: 1;
 }
@@ -4157,7 +4157,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 
 **适用**: CTA按钮、庆祝时刻、互动彩蛋。点击/长按元素时喷射彩色粒子。
 
-**颜色规则**：粒子以黄色+蓝色为主（各约40%），红色少量（约20%）。不出现红色按钮。
+**颜色规则**：粒子以黄色+蓝色为主（各约40%），暖棕少量（约20%）。不出现暖棕按钮。
 
 ```html
 <button class="cool-btn cool-btn-blue" data-cool="true">点我试试 ✨</button>
@@ -4173,14 +4173,14 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   padding: 16px 32px; border-radius: 12px;
   border: none; transition: all 0.2s;
 }
-.cool-btn-blue { background: var(--blue); color: #fff; }
-.cool-btn-blue:hover { background: #1E5BA8; transform: translateY(-2px); }
-.cool-btn-yellow { background: var(--yellow); color: var(--ink); }
+.cool-btn-blue { background: var(--brown); color: #fff; }
+.cool-btn-blue:hover { background: #D8C9B6; transform: translateY(-2px); }
+.cool-btn-yellow { background: var(--blue); color: var(--ink); }
 .cool-btn-yellow:hover { background: #e6c840; transform: translateY(-2px); }
 .cool-btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
 .cool-btn-outline:hover { background: var(--ink); color: var(--cream); transform: translateY(-2px); }
-.cool-btn-pill { background: var(--cream-dark); color: var(--blue); border: 1.5px solid var(--blue); border-radius: 999px; padding: 14px 28px; }
-.cool-btn-pill:hover { background: var(--blue); color: #fff; transform: translateY(-2px); }
+.cool-btn-pill { background: var(--cream-dark); color: var(--ink); border: 1.5px solid var(--pear); border-radius: 999px; padding: 14px 28px; }
+.cool-btn-pill:hover { background: var(--brown); color: #fff; transform: translateY(-2px); }
 
 /* 粒子容器（自动创建） */
 #_coolMode_effect { overflow:hidden; position:fixed; inset:0; pointer-events:none; z-index:2147483647; }
@@ -4190,7 +4190,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 // Cool Mode粒子效果
 (function() {
   // 粒子颜色为品牌色硬编码，品牌色如有修改需同步替换
-  const colors = ['#2B7FD8','#2B7FD8','#F4D758','#F4D758','#F4D758','#E84A5F'];
+  const colors = ['#F0E4D2','#F0E4D2','#9EC1C0','#9EC1C0','#9EC1C0','#B38B6D'];
   const sizes = [12,16,20,28,36];
   let particles = [], container, animating = false;
   function getContainer() {
@@ -4238,7 +4238,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 })();
 ```
 
-⚠️ 注意：粒子上限35个，超过不再生成。按钮不要用红色背景。粒子容器自动创建fixed全屏覆盖层。
+⚠️ 注意：粒子上限35个，超过不再生成。按钮不要用暖棕背景。粒子容器自动创建fixed全屏覆盖层。
 
 ---
 
@@ -4265,7 +4265,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   display: inline-block;
   width: 3px;
   height: 1.1em;
-  background: var(--blue);
+  background: var(--pear);
   margin-left: 2px;
   vertical-align: text-bottom;
   animation: blink 1s steps(1) infinite;
@@ -4297,7 +4297,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 })();
 ```
 
-⚠️ 光标颜色用品牌蓝。打字速度100ms/字，删除50ms/字。多词循环时停顿1.5s。
+⚠️ 光标颜色用梨黄。打字速度100ms/字，删除50ms/字。多词循环时停顿1.5s。
 
 ---
 
@@ -4330,8 +4330,8 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 .kinetic-text span:hover {
   font-weight: 900;
   padding-inline: 0.08em;
-  -webkit-text-stroke-color: var(--blue);
-  color: var(--blue);
+  -webkit-text-stroke-color: var(--ink);
+  color: var(--ink);
 }
 ```
 
@@ -4358,7 +4358,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 })();
 ```
 
-⚠️ hover颜色用品牌蓝。字体用衬线体（Noto Serif SC）效果最好。
+⚠️ hover颜色用梨黄。字体用衬线体（Noto Serif SC）效果最好。
 
 ---
 
@@ -4427,7 +4427,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 
 适用场景：`正文重点` `教程` `引用` `金句标注`
 
-模拟真人用马克笔的效果标注文字。4种变体：黄色荧光、蓝色波浪下划线、红色画圈、蓝色方框。
+模拟真人用马克笔的效果标注文字。4种变体：黄色荧光、蓝色波浪下划线、暖棕画圈、蓝色方框。
 
 ```html
 <!-- 黄色荧光笔 -->
@@ -4436,7 +4436,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 <!-- 蓝色波浪下划线 -->
 <span class="hl-blue-underline">重点文字</span>
 
-<!-- 红色画圈 -->
+<!-- 暖棕画圈 -->
 <span class="hl-red-circle">关键词</span>
 
 <!-- 蓝色方框 -->
@@ -4445,16 +4445,16 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 
 ```css
 .hl-yellow {
-  background: linear-gradient(180deg, transparent 60%, rgba(244,215,88,0.4) 60%);
+  background: linear-gradient(180deg, transparent 60%, rgba(158,193,192,0.4) 60%);
   padding: 0 4px;
   border-radius: 2px;
 }
 .hl-blue-underline {
-  text-decoration: underline wavy var(--blue);
+  text-decoration: underline wavy var(--pear);
   text-underline-offset: 4px;
 }
 .hl-red-circle {
-  border: 2.5px solid var(--red);
+  border: 2.5px solid var(--brown);
   border-radius: 50% 45% 55% 40% / 50% 45% 55% 40%;
   padding: 2px 8px;
   display: inline-block;
@@ -4462,7 +4462,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 }
 @keyframes hl-wiggle { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
 .hl-box {
-  border: 2.5px solid var(--blue);
+  border: 2.5px solid var(--pear);
   border-radius: 4px;
   padding: 2px 6px;
   display: inline-block;
@@ -4491,9 +4491,9 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   -webkit-text-stroke: 2px #000;
   transform: skewX(-8deg);
   text-transform: uppercase;
-  filter: drop-shadow(4px 4px 0px #000) drop-shadow(2px 2px 0px var(--red));
-  background-color: var(--yellow);
-  background-image: radial-gradient(circle at 1px 1px, var(--red) 1px, transparent 0);
+  filter: drop-shadow(4px 4px 0px #000) drop-shadow(2px 2px 0px var(--brown));
+  background-color: var(--blue);
+  background-image: radial-gradient(circle at 1px 1px, var(--brown) 1px, transparent 0);
   background-size: 7px 7px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4507,7 +4507,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 }
 ```
 
-⚠️ 需要Google Font: Bangers。圆点用红色+黄色底。一个页面最多出现1次，不要过度使用。
+⚠️ 需要Google Font: Bangers。圆点用暖棕+黄色底。一个页面最多出现1次，不要过度使用。
 
 ---
 
@@ -4538,7 +4538,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   font-family: 'Noto Sans SC', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--ink);
   transform-origin: center;
 }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -4550,7 +4550,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--yellow);
+  background: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4576,4 +4576,4 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 })();
 ```
 
-⚠️ 旋转速度12s一圈。文字颜色用品牌蓝。中心圆用品牌黄。文字末尾加空格或符号分隔。
+⚠️ 旋转速度12s一圈。文字颜色用梨黄。中心圆用品牌黄。文字末尾加空格或符号分隔。

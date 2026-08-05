@@ -127,7 +127,7 @@
   left: 22px;
   top: 40px; bottom: 40px;
   width: 2px;
-  border-left: 2px dashed var(--yellow);
+  border-left: 2px dashed var(--blue);
 }
 .step-item {
   position: relative;
@@ -137,7 +137,7 @@
   left: -60px;
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--pear);
   color: #fff;
   display: flex;
   align-items: center;
@@ -178,7 +178,7 @@
   left: 50%;
   top: 0; bottom: 0;
   width: 2px;
-  background: rgba(43, 127, 216, 0.15);
+  background: rgba(240,228,210, 0.15);
 }
 .timeline-item {
   display: grid;
@@ -210,7 +210,7 @@
 
 ```css
 .dark-section {
-  background: #151821;
+  background: #1A1A2E;
   color: #e2e8f0;
   padding: clamp(60px, 8vh, 120px) 0;
 }
@@ -262,7 +262,7 @@
   top: 28px;
   left: 28px; right: 28px;
   height: 3px;
-  background: linear-gradient(90deg, var(--yellow), var(--blue));
+  background: linear-gradient(90deg, var(--blue), var(--pear));
 }
 .step-card {
   text-align: center;
@@ -271,7 +271,7 @@
 .step-dot {
   width: 56px; height: 56px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--pear);
   color: #fff;
   display: inline-flex;
   align-items: center;
@@ -399,7 +399,7 @@
 
 ```css
 .section-accent {
-  background: var(--blue);
+  background: var(--pear);
   color: #fff;
   padding: clamp(80px, 12vh, 160px) 0;
   position: relative;
@@ -456,7 +456,7 @@
 .timeline-card .year {
   font-family: 'Fraunces', serif;
   font-size: 1.8rem;
-  color: var(--blue);
+  color: var(--ink);
   opacity: 0.6;
 }
 ```
@@ -548,8 +548,8 @@
   margin-bottom: -2px;
 }
 .tab.active {
-  border-bottom-color: var(--blue);
-  color: var(--blue);
+  border-bottom-color: var(--ink);
+  color: var(--ink);
   font-weight: 600;
 }
 .tab-content { display: none; }
@@ -657,7 +657,7 @@
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
   font-weight: 900;
-  color: rgba(43,127,216,0.12);
+  color: rgba(240,228,210,0.12);
   min-width: 36px;
   transition: all 0.3s ease;
 }
@@ -666,7 +666,7 @@
   font-weight: 700;
 }
 .layout-sticky-mag .nav li.active::before {
-  color: var(--blue);
+  color: var(--ink);
   font-size: 1.8rem;
 }
 .steps-content {
@@ -696,10 +696,10 @@
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
-  color: rgba(43,127,216,0.15);
+  color: rgba(240,228,210,0.15);
 }
-.step-item:nth-child(3n+2) .step-num { color: rgba(244,215,88,0.35); }
-.step-item:nth-child(3n) .step-num { color: rgba(232,74,95,0.2); }
+.step-item:nth-child(3n+2) .step-num { color: rgba(158,193,192,0.35); }
+.step-item:nth-child(3n) .step-num { color: rgba(179,139,109,0.2); }
 .step-item .step-info h4 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.3rem;

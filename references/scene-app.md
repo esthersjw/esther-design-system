@@ -82,9 +82,9 @@ App型页面色彩更简洁：
 |------|------|------|
 | 背景 | `#fefcf6` | 保持品牌暖底 |
 | 卡片 | `#fff` | 白卡片浮于背景上 |
-| Header/Badge | `var(--blue)` | 品牌蓝做主交互色 |
-| 强调/边框 | `var(--yellow)` | 黄色做border/badge |
-| 危险操作 | `var(--red)` | 红色仅用于删除/警告 |
+| Header/Badge | `var(--pear)` | 梨黄做主交互色 |
+| 强调/边框 | `var(--blue)` | 黄色做border/badge |
+| 危险操作 | `var(--brown)` | 暖棕仅用于删除/警告 |
 | 绿色板块 | `#2d6a4f` | 特殊功能板块（如梦境/自然） |
 
 ### 分类标签扩展色
@@ -115,8 +115,8 @@ App型页面色彩更简洁：
   transition: all .2s;
 }
 .tab.active {
-  border-bottom-color: var(--blue);
-  color: var(--blue);
+  border-bottom-color: var(--ink);
+  color: var(--ink);
   font-weight: 600;
 }
 ```
@@ -172,8 +172,8 @@ App型页面色彩更简洁：
 }
 .app-input:focus {
   outline: none;
-  border-color: var(--blue, #2B7FD8);
-  box-shadow: 0 0 0 3px rgba(43,127,216,0.1);
+  border-color: var(--pear, #F0E4D2);
+  box-shadow: 0 0 0 3px rgba(240,228,210,0.1);
 }
 ```
 

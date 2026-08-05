@@ -9,18 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,900;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <style>
     /* === CSS变量 === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
+    :root { --_yu-ds: "yu-v1";
+      --pear: #F0E4D2;
+      --pear-deep: #D8C9B6;
+      --blue: #9EC1C0;
+      --blue-soft: #DCE9E8;
+      --brown: #B38B6D;
       --cream: #fefcf6;
-      --cream-dark: #faf6eb;
+      --cream-dark: #F7F0E4;
       --ink: #1A1A2E;
       --ink-light: #4A4A5A;
       --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
+      --dark-panel: #1A1A2E;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,7 +34,7 @@
     }
 
     ::selection {
-      background: var(--yellow);
+      background: var(--blue);
       color: var(--ink);
     }
 
@@ -81,7 +81,7 @@
       position: absolute;
       bottom: -4px; left: 0; right: 0;
       height: 2px;
-      background: var(--yellow);
+      background: var(--blue);
       transform: scaleX(0);
       transition: transform .25s ease-out;
     }
@@ -107,7 +107,7 @@
       top: -20%; right: -10%;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(244,215,88,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(158,193,192,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero::after {
@@ -116,7 +116,7 @@
       bottom: -10%; left: -5%;
       width: 400px; height: 400px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(43,127,216,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(240,228,210,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -139,7 +139,7 @@
       position: relative;
     }
     .hero h1 .hl {
-      background: linear-gradient(transparent 60%, rgba(244,215,88,0.4) 60%);
+      background: linear-gradient(transparent 60%, rgba(158,193,192,0.4) 60%);
       padding: 0 6px;
     }
 
@@ -166,7 +166,7 @@
     .hero-meta .dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--yellow);
+      background: var(--blue);
     }
 
     /* === Sections === */
@@ -180,7 +180,7 @@
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--blue);
+      color: var(--ink);
       opacity: 0.3;
       display: block;
       margin-bottom: 0.25rem;
@@ -215,9 +215,9 @@
       top: 0; left: 0; right: 0;
       height: 4px;
     }
-    .speaker-card:nth-child(1)::before { background: var(--blue); }
-    .speaker-card:nth-child(2)::before { background: var(--yellow); }
-    .speaker-card:nth-child(3)::before { background: var(--red); }
+    .speaker-card:nth-child(1)::before { background: var(--pear); }
+    .speaker-card:nth-child(2)::before { background: var(--blue); }
+    .speaker-card:nth-child(3)::before { background: var(--brown); }
 
     .speaker-avatar {
       width: 64px; height: 64px;
@@ -228,9 +228,9 @@
       justify-content: center;
       font-size: 1.8rem;
     }
-    .speaker-card:nth-child(1) .speaker-avatar { background: rgba(43,127,216,0.08); }
-    .speaker-card:nth-child(2) .speaker-avatar { background: rgba(244,215,88,0.15); }
-    .speaker-card:nth-child(3) .speaker-avatar { background: rgba(232,74,95,0.08); }
+    .speaker-card:nth-child(1) .speaker-avatar { background: rgba(240,228,210,0.08); }
+    .speaker-card:nth-child(2) .speaker-avatar { background: rgba(158,193,192,0.15); }
+    .speaker-card:nth-child(3) .speaker-avatar { background: rgba(179,139,109,0.08); }
 
     .speaker-name {
       font-family: 'Noto Serif SC', serif;
@@ -240,7 +240,7 @@
     }
     .speaker-role {
       font-size: 0.78rem;
-      color: var(--blue);
+      color: var(--ink);
       font-weight: 500;
       margin-bottom: 12px;
     }
@@ -271,10 +271,10 @@
       justify-content: center;
       font-size: 1.8rem;
     }
-    .highlight-card:nth-child(1) .highlight-icon { background: rgba(43,127,216,0.06); }
-    .highlight-card:nth-child(2) .highlight-icon { background: rgba(244,215,88,0.12); }
-    .highlight-card:nth-child(3) .highlight-icon { background: rgba(232,74,95,0.06); }
-    .highlight-card:nth-child(4) .highlight-icon { background: rgba(43,127,216,0.06); }
+    .highlight-card:nth-child(1) .highlight-icon { background: rgba(240,228,210,0.06); }
+    .highlight-card:nth-child(2) .highlight-icon { background: rgba(158,193,192,0.12); }
+    .highlight-card:nth-child(3) .highlight-icon { background: rgba(179,139,109,0.06); }
+    .highlight-card:nth-child(4) .highlight-icon { background: rgba(240,228,210,0.06); }
     .highlight-content {
       flex: 1;
       padding: 20px 24px;
@@ -310,7 +310,7 @@
       text-align: center;
     }
     .dark-section .quote-text em {
-      color: var(--yellow);
+      color: var(--blue);
       font-style: normal;
     }
     .dark-section .quote-attr {
@@ -323,7 +323,7 @@
 
     /* === 品牌色面板（时间线） === */
     .brand-section {
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       padding: clamp(80px, 12vh, 160px) 0;
       position: relative;
@@ -371,7 +371,7 @@
       top: 8px;
       width: 12px; height: 12px;
       border-radius: 50%;
-      background: var(--yellow);
+      background: var(--blue);
       border: 2px solid rgba(255,255,255,0.3);
     }
     .timeline-time {
@@ -397,7 +397,7 @@
       padding: 36px 40px;
       background: var(--cream);
       border-radius: 16px;
-      border: 2px solid var(--yellow);
+      border: 2px solid var(--blue);
       position: relative;
       max-width: 720px;
       margin: 0 auto;
@@ -406,7 +406,7 @@
       content: '"';
       font-family: 'Fraunces', serif;
       font-size: 5rem;
-      color: var(--yellow);
+      color: var(--blue);
       position: absolute;
       top: -10px; left: 20px;
       opacity: 0.5;
@@ -449,7 +449,7 @@
       align-items: center;
       gap: 8px;
       padding: 16px 36px;
-      background: var(--blue);
+      background: var(--pear);
       color: #fff;
       border-radius: 12px;
       text-decoration: none;
@@ -459,7 +459,7 @@
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+      box-shadow: 0 8px 24px rgba(240,228,210,0.3);
     }
     .cta-note {
       margin-top: 1rem;
@@ -569,7 +569,7 @@
   <section class="dark-section">
     <div class="container reveal">
       <p class="quote-text">AI不会取代创作者，但<em>会用AI的创作者</em>会取代不会用的。<br>这不是一句口号，而是我们正在经历的现实。</p>
-      <p class="quote-attr">— 本次活动发起人 · 不二</p>
+      <p class="quote-attr">— 本次活动发起人 · YU</p>
     </div>
   </section>
 
@@ -675,7 +675,7 @@
 
   <!-- ====== Footer ====== -->
   <footer class="footer">
-    <p>AI 创作者之夜 © 2026 · 由不二发起 · Powered by Esther Design System</p>
+    <p>AI 创作者之夜 © 2026 · 由 YU 发起 · Powered by YU Design System</p>
   </footer>
 
   <!-- ====== Scripts ====== -->
@@ -696,7 +696,7 @@
       document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 40);
     });
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- © YU YU/YU-design-system CC BY-NC 4.0 -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">yu-design-system</section>
 </body>
 </html>
