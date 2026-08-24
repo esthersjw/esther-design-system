@@ -8,17 +8,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* === CSS变量（简化版） === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --card-bg: #fff;
-      --border: rgba(26,26,26,.08);
+    /* === CSS变量（Token 体系，与 brand-dna.md 同步）=== */
+    :root { --_kai-ds: "jokerwon-v1";
+      /* ===== 基础 Token 层（主题变更只改这里） ===== */
+      --c-base: #FCFCFC;                       /* 空（基底）：页面底色 */
+      --c-primary: #2F4767;                    /* 主色：标题、主交互、主按钮 */
+      --c-primary-deep: #243C6C;               /* 主色暗变体：深色面板、hover */
+      --c-primary-bright: #3C546C;             /* 主色亮变体：分层 */
+      --c-accent: #FAD470;                     /* 唯一强调（姜黄）：badge/选中/高亮，≤5% */
+      --c-accent-soft: rgba(250, 212, 112, 0.18); /* 强调浅底 */
+      --c-ink: #2A2624;                        /* 中性深：标题文字 */
+      --c-text: #303A43;                       /* 中性灰蓝：正文、次要元素 */
+      --c-text-faint: rgba(48, 58, 67, 0.55);  /* 辅助文字 */
+      --c-warm: #F3C7A1;                       /* 暖辅：卡片底、温和提示 */
+      --c-warm-deep: #F3BB99;                  /* 暖辅胭红变体 */
+      --c-warm-soft: rgba(243, 199, 161, 0.12);   /* 暖辅浅底 */
+      --c-line: #0C0C0C;                       /* 近黑手绘描边 */
+      /* ===== 语义别名层（旧变量名兼容，下游 var() 引用零改动） ===== */
+      --yellow: var(--c-accent);
+      --yellow-soft: var(--c-accent-soft);
+      --blue: var(--c-primary);
+      --blue-deep: var(--c-primary-deep);
+      --red: var(--c-warm-deep);
+      --cream: var(--c-base);
+      --cream-dark: var(--c-warm-soft);
+      --ink: var(--c-ink);
+      --ink-light: var(--c-text);
+      --ink-faint: var(--c-text-faint);
+      --dark-panel: var(--c-primary-deep);
+      /* ===== App 场景派生变量 ===== */
+      --card-bg: var(--c-base);                /* 卡片与底色同色，层次靠描边 */
+      --border: rgba(42, 38, 36, 0.08);        /* 炭黑透明度派生：卡片/输入框描边 */
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -67,7 +87,7 @@
       display: flex;
       gap: 4px;
       overflow-x: auto;
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid var(--border);
       padding: 0 1.5rem;
       background: var(--cream);
     }
@@ -111,6 +131,7 @@
 
     .app-card {
       background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.25rem;
       box-shadow: 0 2px 12px rgba(0,0,0,.04);
@@ -139,7 +160,7 @@
       padding: 2px 8px;
       border-radius: 8px;
       font-size: 0.7rem;
-      background: rgba(43,127,216,0.1);
+      background: rgba(47,71,103,0.1);
       color: var(--blue);
       margin-bottom: 0.5rem;
     }
@@ -166,7 +187,7 @@
 
     .modal-content {
       background: var(--cream);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 2rem;
       max-width: 560px;
       width: 90%;
@@ -202,7 +223,7 @@
     .app-input:focus {
       outline: none;
       border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(43,127,216,0.1);
+      box-shadow: 0 0 0 3px rgba(47,71,103,0.1);
     }
 
     /* === 响应式 === */
@@ -284,7 +305,7 @@
       document.getElementById('modal').classList.remove('active');
     }
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- Based on esther-design-system by ESTHER不二 (esthersjw), CC BY-NC-SA 4.0. Modifications by Kai (jokerwon). -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">kai-design-system</section>
 </body>
 </html>

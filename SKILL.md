@@ -1,12 +1,12 @@
 ---
-name: esther-design-system
-description: 不二的个人IP设计系统。做HTML页面、个人网站、教程页面、介绍页面、landing page等任何前端设计时自动触发。包含品牌DNA和多个场景子规范。
-author: ESTHER不二 (esthersjw)
+name: kai-design-system
+description: Kai 的个人设计系统（KAI 设计体系）。做HTML页面、个人网站、教程页面、介绍页面、landing page等任何前端设计时自动触发。包含品牌DNA和多个场景子规范。
+author: Kai (jokerwon)
 license: CC BY-NC-SA 4.0
-repo: https://github.com/esthersjw/esther-design-system
+repo: https://github.com/jokerwon/kai-design-system
 ---
 
-> © 2026 ESTHER不二 (esthersjw) | CC BY-NC-SA 4.0
+> 基于 [esther-design-system](https://github.com/esthersjw/esther-design-system)（作者：ESTHER不二）修改 | CC BY-NC-SA 4.0
 > 使用本 Skill 需署名原作者，禁止商用，修改后须以相同协议分享。
 
 触发条件：当用户要求制作HTML网页、个人页面、教程页面、介绍型页面、landing page、活动页面、App型页面、作品集等任何前端设计相关任务时触发。也在用户说"做图文"、"图文卡片"、"小红书图文"、"文章转卡片"、"转成图文"、"做卡片"时触发。

@@ -6,21 +6,36 @@
   <title><!-- 页面标题 --></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* === CSS变量 === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --cream-dark: #faf6eb;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
+    /* === CSS变量（Token 体系，与 brand-dna.md 同步）=== */
+    :root { --_kai-ds: "jokerwon-v1";
+      /* ===== 基础 Token 层（主题变更只改这里） ===== */
+      --c-base: #FCFCFC;                       /* 空（基底）：页面底色 */
+      --c-primary: #2F4767;                    /* 主色：标题、主色块、主按钮 */
+      --c-primary-deep: #243C6C;               /* 主色暗变体：深色面板、hover */
+      --c-primary-bright: #3C546C;             /* 主色亮变体：分层 */
+      --c-accent: #FAD470;                     /* 唯一强调（姜黄）：下划线/徽章/高亮，≤5% */
+      --c-accent-soft: rgba(250, 212, 112, 0.18); /* 强调浅底 */
+      --c-ink: #2A2624;                        /* 中性深：标题文字、手绘轮廓 */
+      --c-text: #303A43;                       /* 中性灰蓝：正文、次要元素 */
+      --c-text-faint: rgba(48, 58, 67, 0.55);  /* 辅助文字 */
+      --c-warm: #F3C7A1;                       /* 暖辅：卡片底、温和提示 */
+      --c-warm-deep: #F3BB99;                  /* 暖辅胭红变体 */
+      --c-warm-soft: rgba(243, 199, 161, 0.12);   /* 暖辅浅底：交替背景 */
+      --c-line: #0C0C0C;                       /* 近黑手绘描边 */
+      /* ===== 语义别名层（旧变量名兼容，下游 var() 引用零改动） ===== */
+      --yellow: var(--c-accent);
+      --yellow-soft: var(--c-accent-soft);
+      --blue: var(--c-primary);
+      --blue-deep: var(--c-primary-deep);
+      --red: var(--c-warm-deep);
+      --cream: var(--c-base);
+      --cream-dark: var(--c-warm-soft);
+      --ink: var(--c-ink);
+      --ink-light: var(--c-text);
+      --ink-faint: var(--c-text-faint);
+      --dark-panel: var(--c-primary-deep);
     }
 
     /* === Reset === */
@@ -97,11 +112,9 @@
     }
 
     .section-number {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: clamp(1.4rem, 3vw, 2rem);
       color: var(--blue);
-      opacity: 0.3;
       display: block;
       margin-bottom: 0.25rem;
     }
@@ -115,7 +128,7 @@
     /* === 卡片 === */
     .feature-card {
       background: var(--cream-dark);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: clamp(24px, 3vw, 36px);
       border-bottom: 4px solid var(--yellow);
       transition: transform 0.3s ease;
@@ -199,7 +212,7 @@
 
   <!-- ====== SECTION 3 ====== -->
   <!-- 可选：深色面板打破节奏 -->
-  <section class="section" style="background: var(--dark-panel); color: #e2e8f0;">
+  <section class="section" style="background: var(--dark-panel); color: #FCFCFC;">
     <div class="container">
       <div class="reveal">
         <!-- 重点内容/引用 -->
@@ -227,7 +240,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- Based on esther-design-system by ESTHER不二 (esthersjw), CC BY-NC-SA 4.0. Modifications by Kai (jokerwon). -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">kai-design-system</section>
 </body>
 </html>

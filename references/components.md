@@ -1,6 +1,7 @@
 # 组件库
 
 > 51个经过验证的可复用组件。直接复制代码使用。
+> 颜色全部由 `brand-dna.md` 的 **Token 体系**驱动：优先 `var()` 引用，内联 fallback 已同步 KAI 色板。换主题只改 brand-dna.md 的 token 定义，本文件零改动。
 
 ## 📌 场景索引（先查这里，再去找具体代码）
 
@@ -60,7 +61,7 @@
   padding: 32px 24px 20px;
 }
 .magazine-card .card-title {
-  font-family: 'Fraunces', 'Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', Georgia, serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 1.15;
@@ -98,7 +99,7 @@
 .number-card {
   position: relative;
   padding: 28px 24px;
-  background: #fff;
+  background: #FCFCFC
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
@@ -107,10 +108,10 @@
   position: absolute;
   top: -10px;
   right: 10px;
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 5.5rem;
   font-weight: 900;
-  color: rgba(43, 127, 216, 0.08);
+  color: rgba(47, 71, 103, 0.08);
   line-height: 1;
   pointer-events: none;
 }
@@ -129,11 +130,11 @@
 }
 ```
 
-**变体**: 编号颜色按品牌三色轮换（蓝/黄/红）
+**变体**: 编号颜色用色板浅透明变体轮换（藏青/姜黄/暖辅）
 ```css
-.number-card:nth-child(3n+1) .card-number { color: rgba(43, 127, 216, 0.08); }
-.number-card:nth-child(3n+2) .card-number { color: rgba(244, 215, 88, 0.15); }
-.number-card:nth-child(3n) .card-number { color: rgba(232, 74, 95, 0.1); }
+.number-card:nth-child(3n+1) .card-number { color: rgba(47, 71, 103, 0.08); }
+.number-card:nth-child(3n+2) .card-number { color: rgba(250, 212, 112, 0.15); }
+.number-card:nth-child(3n) .card-number { color: rgba(243, 199, 161, 0.1); }
 ```
 
 ---
@@ -152,7 +153,7 @@
 
 ```css
 .tag-card {
-  background: #fff;
+  background: #FCFCFC
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
@@ -166,9 +167,9 @@
   margin-bottom: 14px;
 }
 /* pill颜色变体 */
-.tag-card .card-pill--blue { background: rgba(43,127,216,0.1); color: var(--blue); }
-.tag-card .card-pill--yellow { background: rgba(244,215,88,0.25); color: #9a8100; }
-.tag-card .card-pill--red { background: rgba(232,74,95,0.1); color: var(--red); }
+.tag-card .card-pill--blue { background: rgba(47,71,103,0.1); color: var(--blue); }
+.tag-card .card-pill--yellow { background: rgba(250,212,112,0.25); color: #2A2624; }
+.tag-card .card-pill--red { background: rgba(243,199,161,0.1); color: var(--red); }
 .tag-card .card-title {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.05rem;
@@ -201,7 +202,7 @@
 .icon-card {
   display: flex;
   align-items: stretch;
-  background: #fff;
+  background: #FCFCFC
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
@@ -215,9 +216,9 @@
   font-size: 2.8rem;
 }
 /* icon区颜色变体 */
-.icon-card .card-icon-area--blue { background: rgba(43,127,216,0.06); }
-.icon-card .card-icon-area--yellow { background: rgba(244,215,88,0.12); }
-.icon-card .card-icon-area--red { background: rgba(232,74,95,0.06); }
+.icon-card .card-icon-area--blue { background: rgba(47,71,103,0.06); }
+.icon-card .card-icon-area--yellow { background: rgba(250,212,112,0.12); }
+.icon-card .card-icon-area--red { background: rgba(243,199,161,0.06); }
 .icon-card .card-content {
   flex: 1;
   padding: 18px 16px;
@@ -263,7 +264,7 @@
 .quote-editorial {
   position: relative;
   padding: 48px 32px 28px 72px;
-  background: white;
+  background: #FCFCFC
   border-radius: 20px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.04);
 }
@@ -272,14 +273,14 @@
   position: absolute;
   top: 12px;
   left: 24px;
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 5rem;
   line-height: 1;
   color: var(--yellow);
   opacity: 0.8;
 }
 .quote-editorial .quote-title {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.3rem;
   font-weight: 700;
   font-style: italic;
@@ -295,7 +296,7 @@
   margin-top: 16px;
   font-size: 0.75rem;
   color: var(--ink-faint);
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
 }
 ```
 
@@ -303,7 +304,7 @@
 
 #### 1E-B. 手写批注 Handwritten Note
 
-虚线边框 + Caveat字体标签，适合提示/注意事项/笔记感。
+虚线边框 + 小号标签，适合提示/注意事项/笔记感。
 
 ```html
 <div class="quote-handwrite">
@@ -317,15 +318,15 @@
 .quote-handwrite {
   position: relative;
   padding: 28px 24px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(47,71,103,0.25);
   border-radius: 12px;
-  background: white;
+  background: #FCFCFC
 }
 .quote-handwrite .quote-badge {
   position: absolute;
   top: -12px;
   left: 20px;
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--blue);
@@ -333,7 +334,7 @@
   padding: 0 10px;
 }
 .quote-handwrite .quote-title {
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--ink);
@@ -373,7 +374,7 @@
   font-weight: 900;
   margin-bottom: 12px;
   display: inline;
-  background: linear-gradient(to top, rgba(244,215,88,0.5) 45%, transparent 45%);
+  background: linear-gradient(to top, rgba(250,212,112,0.5) 45%, transparent 45%);
   line-height: 1.8;
   padding: 2px 4px;
 }
@@ -409,7 +410,7 @@
   background: #1e1e2e;
   border-radius: 12px;
   overflow: hidden;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
 }
 .quote-terminal .quote-toolbar {
   background: #313244;
@@ -424,12 +425,12 @@
 }
 .quote-terminal .dot:nth-child(1) { background: var(--red); }
 .quote-terminal .dot:nth-child(2) { background: var(--yellow); }
-.quote-terminal .dot:nth-child(3) { background: #4ade80; }
+.quote-terminal .dot:nth-child(3) { background: var(--blue); }
 .quote-terminal .quote-body {
   padding: 20px 24px;
 }
 .quote-terminal .quote-prompt {
-  color: #4ade80;
+  color: var(--yellow);
   font-size: 0.75rem;
   margin-bottom: 8px;
 }
@@ -465,10 +466,10 @@
 
 ```css
 .section-number {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   opacity: 0.3;
   display: block;
   margin-bottom: 0.25rem;
@@ -477,7 +478,7 @@
   font-family: 'Noto Serif SC', serif;
   font-weight: 900;
   font-size: clamp(1.4rem, 3vw, 2.2rem);
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
 }
 ```
 
@@ -510,31 +511,31 @@
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 2;
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
   margin-bottom: 2rem;
 }
 .quote-minimal .quote-body .hl {
-  background: linear-gradient(transparent 60%, rgba(244,215,88,0.3) 60%);
+  background: linear-gradient(transparent 60%, rgba(250,212,112,0.3) 60%);
   padding: 0 4px;
 }
 .quote-minimal .quote-rule {
   width: 60px;
   height: 3px;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #FAD470);
   margin-bottom: 2rem;
 }
 .quote-minimal .quote-conclusion {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.2rem;
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   line-height: 1.7;
 }
 ```
 
 ### 3B. 手写批注风
 
-虚线边框 + Caveat字体标签，笔记批注感。
+虚线边框 + 小号标签，笔记批注感。
 
 ```html
 <div class="key-insight quote-note">
@@ -547,25 +548,25 @@
 .quote-note {
   position: relative;
   padding: 24px 28px;
-  background: white;
+  background: #FCFCFC
   border-radius: 10px;
-  border: 1.5px dashed rgba(43, 127, 216, 0.3);
+  border: 1.5px dashed rgba(47, 71, 103, 0.3);
 }
 .quote-note-tag {
   position: absolute;
   top: -10px;
   left: 20px;
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1rem;
-  color: var(--blue, #2B7FD8);
-  background: var(--cream, #fefcf6);
+  color: var(--blue, #2F4767);
+  background: var(--cream, #FCFCFC);
   padding: 0 8px;
   font-weight: 700;
 }
 .quote-note p {
   font-size: 0.93rem;
   line-height: 1.85;
-  color: var(--ink-light, #4A4A5A);
+  color: var(--ink-light, #303A43);
 }
 ```
 
@@ -594,13 +595,13 @@
   transform: translateY(-50%);
   width: 3px;
   height: 60%;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #FAD470);
   border-radius: 2px;
 }
 .quote-typo p {
   font-size: 1rem;
   line-height: 1.85;
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
   font-weight: 500;
   font-style: italic;
 }
@@ -700,13 +701,13 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 .code-macos .code-dots { display: flex; gap: 6px; }
 .code-macos .dot { width: 12px; height: 12px; border-radius: 50%; }
-.code-macos .dot:nth-child(1) { background: #ff5f56; }
-.code-macos .dot:nth-child(2) { background: #ffbd2e; }
-.code-macos .dot:nth-child(3) { background: #27c93f; }
+.code-macos .dot:nth-child(1) { background: var(--red); }
+.code-macos .dot:nth-child(2) { background: var(--yellow); }
+.code-macos .dot:nth-child(3) { background: var(--blue); }
 .code-macos .code-filename {
   flex: 1;
   text-align: center;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.7rem;
   color: var(--ink-faint);
 }
@@ -715,7 +716,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   padding: 24px;
 }
 .code-macos pre {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.82rem;
   line-height: 1.9;
   color: #a9b1d6;
@@ -754,25 +755,25 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(232,74,95,0.2);
+  background: rgba(243,199,161,0.2);
 }
 .code-notebook .code-tab {
   padding: 8px 16px 8px 48px;
   border-bottom: 1px solid #e8e4d9;
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1rem;
   color: var(--blue);
   font-weight: 700;
 }
 .code-notebook pre {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.8rem;
   line-height: 2.2;
   color: var(--ink);
   margin: 0;
   padding: 16px 20px 16px 48px;
   background-image: repeating-linear-gradient(
-    transparent, transparent 31px, rgba(43,127,216,0.05) 31px, rgba(43,127,216,0.05) 32px
+    transparent, transparent 31px, rgba(47,71,103,0.05) 31px, rgba(47,71,103,0.05) 32px
   );
 }
 ```
@@ -804,7 +805,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   position: absolute;
   top: -11px;
   left: 20px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.6rem;
   letter-spacing: 2px;
   color: var(--ink-faint);
@@ -812,7 +813,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   padding: 0 8px;
 }
 .code-typewriter pre {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.82rem;
   line-height: 2;
   color: var(--ink);
@@ -848,7 +849,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 ```css
 .code-clean {
-  background: white;
+  background: #FCFCFC
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.04);
@@ -858,7 +859,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   position: absolute;
   top: 16px;
   right: 20px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.6rem;
   color: var(--ink-faint);
   padding: 2px 8px;
@@ -866,7 +867,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   border-radius: 4px;
 }
 .code-clean pre {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.82rem;
   line-height: 2;
   color: var(--ink);
@@ -877,7 +878,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 .code-clean .str { color: var(--red); }
 .code-clean .cm { color: #94a3b8; }
 .code-clean .highlight-line {
-  background: rgba(43,127,216,0.06);
+  background: rgba(47,71,103,0.06);
   margin: 0 -32px;
   padding: 0 32px;
   border-left: 3px solid var(--blue);
@@ -903,16 +904,16 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 ```css
 .viral-pullquote {
   padding: 36px 40px;
-  background: var(--cream, #fefcf6);
+  background: var(--cream, #FCFCFC);
   border-radius: 16px;
-  border: 2px solid var(--yellow, #F4D758);
+  border: 2px solid var(--yellow, #FAD470);
   position: relative;
 }
 .viral-pullquote::before {
   content: '"';
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 5rem;
-  color: var(--yellow, #F4D758);
+  color: var(--yellow, #FAD470);
   position: absolute;
   top: -10px; left: 20px;
   opacity: 0.5;
@@ -958,14 +959,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   line-height: 1.6;
 }
 .chat-bubble.user {
-  background: var(--yellow, #F4D758);
-  color: var(--ink, #1A1A2E);
+  background: var(--yellow, #FAD470);
+  color: var(--ink, #2A2624);
   align-self: flex-end;
   border-bottom-right-radius: 4px;
 }
 .chat-bubble.ai {
-  background: var(--blue, #2B7FD8);
-  color: #fefcf6;
+  background: var(--blue, #2F4767);
+  color: #FCFCFC;
   align-self: flex-start;
   border-bottom-left-radius: 4px;
 }
@@ -990,10 +991,10 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 ```css
 .tip-number {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   opacity: 0.15;
   line-height: 0.85;
   display: block;
@@ -1032,9 +1033,9 @@ nav {
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 1rem 2rem;
-  background: rgba(254,252,246,.85);
+  background: rgba(252,252,252,0.85);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(26,26,26,.06);
+  border-bottom: 1px solid rgba(42,38,36,0.06);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1048,7 +1049,7 @@ nav.scrolled {
 }
 .nav-links a {
   text-decoration: none;
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
   font-size: 0.85rem;
   position: relative;
 }
@@ -1057,7 +1058,7 @@ nav.scrolled {
   position: absolute;
   bottom: -4px; left: 0; right: 0;
   height: 2px;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #FAD470);
   transform: scaleX(0);
   transition: transform .25s ease-out;
 }
@@ -1106,7 +1107,7 @@ nav.scrolled {
 .chair-number-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .chair-number-card {
   position: relative;
-  background: white;
+  background: #FCFCFC
   border-radius: 20px;
   padding: 40px 24px 28px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.05);
@@ -1116,15 +1117,15 @@ nav.scrolled {
   position: absolute;
   top: -15px;
   right: -5px;
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 6rem;
   font-weight: 900;
   line-height: 1;
   pointer-events: none;
 }
-.chair-number-card:nth-child(1) .chair-big-num { color: rgba(43,127,216,0.08); }
-.chair-number-card:nth-child(2) .chair-big-num { color: rgba(244,215,88,0.15); }
-.chair-number-card:nth-child(3) .chair-big-num { color: rgba(232,74,95,0.08); }
+.chair-number-card:nth-child(1) .chair-big-num { color: rgba(47,71,103,0.08); }
+.chair-number-card:nth-child(2) .chair-big-num { color: rgba(250,212,112,0.15); }
+.chair-number-card:nth-child(3) .chair-big-num { color: rgba(243,199,161,0.08); }
 .chair-number-card h3 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.1rem;
@@ -1184,14 +1185,14 @@ nav.scrolled {
   opacity: 0.1;
 }
 .chair-magazine-card .chair-num {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 0.75rem;
   font-style: italic;
   color: var(--ink-faint);
   margin-bottom: 12px;
 }
 .chair-magazine-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 1.2;
@@ -1205,7 +1206,7 @@ nav.scrolled {
 .chair-magazine-card .chair-tag {
   display: inline-block;
   margin-top: 16px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.65rem;
   color: var(--blue);
   text-transform: uppercase;
@@ -1217,7 +1218,7 @@ nav.scrolled {
 
 ### 10C. 手绘虚线框 Dashed Sketch
 
-虚线边框 + Caveat标签，手绘草图感，适合技能/工具/特性介绍。
+虚线边框 + 小号标签，草图感，适合技能/工具/特性介绍。
 
 ```html
 <div class="chair-dashed-grid">
@@ -1246,23 +1247,23 @@ nav.scrolled {
   border-radius: 16px;
   padding: 28px 22px;
   position: relative;
-  background: white;
+  background: #FCFCFC
 }
-.chair-dashed-card:nth-child(1) { border-color: rgba(43,127,216,0.3); }
-.chair-dashed-card:nth-child(2) { border-color: rgba(244,215,88,0.5); }
-.chair-dashed-card:nth-child(3) { border-color: rgba(232,74,95,0.3); }
+.chair-dashed-card:nth-child(1) { border-color: rgba(47,71,103,0.3); }
+.chair-dashed-card:nth-child(2) { border-color: rgba(250,212,112,0.5); }
+.chair-dashed-card:nth-child(3) { border-color: rgba(243,199,161,0.3); }
 .chair-dashed-card .chair-label {
   position: absolute;
   top: -10px;
   left: 16px;
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   background: var(--cream);
   padding: 0 8px;
 }
 .chair-dashed-card:nth-child(1) .chair-label { color: var(--blue); }
-.chair-dashed-card:nth-child(2) .chair-label { color: #9a8100; }
+.chair-dashed-card:nth-child(2) .chair-label { color: #2A2624; }
 .chair-dashed-card:nth-child(3) .chair-label { color: var(--red); }
 .chair-dashed-card h3 {
   font-family: 'Noto Serif SC', serif;
@@ -1312,9 +1313,9 @@ nav.scrolled {
   position: relative;
   overflow: hidden;
 }
-.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(43,127,216,0.08), rgba(43,127,216,0.02)); }
-.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(244,215,88,0.15), rgba(244,215,88,0.03)); }
-.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(232,74,95,0.08), rgba(232,74,95,0.02)); }
+.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(47,71,103,0.08), rgba(47,71,103,0.02)); }
+.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(250,212,112,0.15), rgba(250,212,112,0.03)); }
+.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(243,199,161,0.08), rgba(243,199,161,0.02)); }
 .chair-gradient-card .chair-emoji {
   font-size: 2rem;
   margin-bottom: 16px;
@@ -1372,7 +1373,7 @@ nav.scrolled {
 .chair-typo-card:nth-child(2) .chair-divider { background: var(--yellow); }
 .chair-typo-card:nth-child(3) .chair-divider { background: var(--red); }
 .chair-typo-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.3rem;
   font-weight: 900;
   margin-bottom: 12px;
@@ -1385,7 +1386,7 @@ nav.scrolled {
 }
 .chair-typo-card .chair-meta {
   margin-top: 16px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.65rem;
   color: var(--ink-faint);
   text-transform: uppercase;
@@ -1424,19 +1425,19 @@ nav.scrolled {
   align-items: center;
   gap: 12px;
   padding: 24px 32px;
-  background: var(--cream, #fefcf6);
+  background: var(--cream, #FCFCFC);
   border-radius: 14px;
-  border: 1px solid rgba(43, 127, 216, 0.1);
+  border: 1px solid rgba(47, 71, 103, 0.1);
 }
 .system-flow span {
   font-size: 0.9rem;
   padding: 6px 14px;
-  background: #fff;
+  background: #FCFCFC
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 .flow-arrow {
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   font-size: 1.2rem;
   background: transparent !important;
   box-shadow: none !important;
@@ -1492,7 +1493,7 @@ nav.scrolled {
   gap: 24px;
 }
 .compare-block {
-  background: white;
+  background: #FCFCFC
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.04);
@@ -1509,7 +1510,7 @@ nav.scrolled {
 .compare-block--do .compare-header { border-color: var(--blue); }
 .compare-header .compare-icon { font-size: 1.3rem; }
 .compare-header .compare-label {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -1537,7 +1538,7 @@ nav.scrolled {
 
 ### 12B. 手写笔记 Handwritten Notes
 
-Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
+小号标签标题 + 虚线边框，适合轻松/教程类内容。
 
 ```html
 <div class="compare-handwrite">
@@ -1557,7 +1558,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 ```css
 .compare-handwrite {
   position: relative;
-  background: white;
+  background: #FCFCFC
   border-radius: 16px;
   padding: 32px;
   border: 1.5px dashed rgba(0,0,0,0.12);
@@ -1566,7 +1567,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   position: absolute;
   top: -12px;
   right: 24px;
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 0.95rem;
   color: var(--ink-faint);
   background: var(--cream);
@@ -1580,7 +1581,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-bottom: 24px;
 }
 .compare-col-title {
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -1636,7 +1637,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   padding: 12px 20px;
 }
 .compare-table-header span {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.7rem;
   color: rgba(255,255,255,0.6);
   text-transform: uppercase;
@@ -1647,7 +1648,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   display: grid;
   grid-template-columns: 1fr 80px 80px;
   padding: 14px 20px;
-  background: white;
+  background: #FCFCFC
   border-bottom: 1px solid rgba(0,0,0,0.04);
   align-items: center;
 }
@@ -1694,7 +1695,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   gap: 24px;
 }
 .compare-stamp-col {
-  background: white;
+  background: #FCFCFC
   border: 2px solid;
   padding: 28px 24px;
   position: relative;
@@ -1707,7 +1708,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 2px;
@@ -1764,7 +1765,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 <div class="hero-cluster">
   <div class="ring"></div>
   <div class="avatar-glow"></div>
-  <img class="avatar-img" src="avatar.jpg" alt="">
+  <img class="avatar-img" src="avatar.png" alt="">
   <span class="orbit-item" style="top:0;right:10%">标签1</span>
   <span class="orbit-item" style="bottom:10%;left:0">标签2</span>
 </div>
@@ -1779,7 +1780,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .ring {
   position: absolute;
   inset: -12px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(47,71,103,0.25);
   border-radius: 50%;
   animation: heroSpin 20s linear infinite;
 }
@@ -1792,7 +1793,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .orbit-item {
   position: absolute;
-  background: white;
+  background: #FCFCFC
   border-radius: 20px;
   padding: 4px 12px;
   font-size: 0.7rem;
@@ -1837,8 +1838,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   transition: all .2s;
 }
 .filter-tag.active {
-  color: #fff;
-  background: var(--blue, #2B7FD8);
+  color: #FCFCFC
+  background: var(--blue, #2F4767);
 }
 .filter-tag:hover:not(.active) {
   background: rgba(0,0,0,.1);
@@ -1868,7 +1869,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ```css
 .book-card {
-  background: #fff;
+  background: #FCFCFC
   border-radius: 16px;
   padding: 28px 24px 22px;
   box-shadow: 0 8px 40px rgba(0,0,0,.1);
@@ -1884,15 +1885,15 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   padding: 3px 10px;
   border-radius: 12px;
   font-size: 0.7rem;
-  background: rgba(43,127,216,0.1);
-  color: var(--blue, #2B7FD8);
+  background: rgba(47,71,103,0.1);
+  color: var(--blue, #2F4767);
   margin-bottom: 0.75rem;
 }
 .verdict {
-  border-left: 3px solid var(--blue, #2B7FD8);
+  border-left: 3px solid var(--blue, #2F4767);
   padding-left: 12px;
   font-size: 0.85rem;
-  color: var(--ink-light, #4A4A5A);
+  color: var(--ink-light, #303A43);
   margin: 0.75rem 0;
 }
 .tag {
@@ -1900,7 +1901,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   padding: 2px 8px;
   border-radius: 8px;
   font-size: 0.7rem;
-  background: var(--cream-dark, #faf6eb);
+  background: var(--cream-dark, rgba(243,199,161,0.12));
 }
 ```
 
@@ -1941,7 +1942,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   top: 1.5rem; right: 1.5rem;
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: #fff;
+  background: #FCFCFC
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1954,7 +1955,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin: 0 auto;
 }
 .book-section {
-  background: var(--cream, #fefcf6);
+  background: var(--cream, #FCFCFC);
   padding: 48px 44px;
   margin-bottom: 2px;
   border-radius: 16px;
@@ -1988,7 +1989,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .cal-cell {
   aspect-ratio: 1;
   border-radius: 6px;
-  background: #fff;
+  background: #FCFCFC
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1997,7 +1998,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .day-num {
   font-size: 0.7rem;
-  color: var(--ink-light, #4A4A5A);
+  color: var(--ink-light, #303A43);
 }
 .mood-emoji {
   font-size: 1.2rem;
@@ -2022,8 +2023,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  background: var(--blue, #2B7FD8);
-  color: #fff;
+  background: var(--blue, #2F4767);
+  color: #FCFCFC
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
@@ -2032,7 +2033,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+  box-shadow: 0 8px 24px rgba(47,71,103,0.3);
 }
 ```
 
@@ -2042,7 +2043,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ## 19. 对比表A：杂志Editorial对比
 
-不对称grid布局（左0.35fr 右1fr），左边放大标题区（sticky），右边每行是Fraunces大号编号+两列对比值。暖色背景，无深色。
+不对称grid布局（左0.35fr 右1fr），左边放大标题区（sticky），右边每行是Georgia大号编号+两列对比值。暖色背景，无深色。
 
 适用场景：两个事物的对比分析、before/after、竞品对比、架构拆解类页面
 
@@ -2081,14 +2082,14 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 ```css
 /* 杂志Editorial对比 */
 .section-editorial {
-  background: #faf6eb;
+  background: rgba(243,199,161,0.12);
   padding: clamp(80px, 12vh, 160px) 0;
 }
 .section-editorial .section-number {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   opacity: 0.3;
   display: block;
   margin-bottom: 0.25rem;
@@ -2097,7 +2098,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-family: 'Noto Serif SC', serif;
   font-weight: 900;
   font-size: clamp(1.4rem, 3vw, 2.2rem);
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
 }
 .editorial-layout {
   display: grid;
@@ -2110,17 +2111,17 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   top: 100px;
 }
 .editorial-side .big-label {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   opacity: 0.1;
   line-height: 0.85;
   display: block;
 }
 .editorial-side .editorial-subtitle {
   font-size: 0.9rem;
-  color: var(--ink-light, #4A4A5A);
+  color: var(--ink-light, #303A43);
   margin-top: 1rem;
   line-height: 1.7;
 }
@@ -2138,27 +2139,27 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .editorial-row:last-child { border-bottom: none; }
 .editorial-num {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--yellow, #F4D758);
+  color: var(--yellow, #FAD470);
   line-height: 1;
 }
 .editorial-col h4 {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--ink-faint, #8A8A9A);
+  color: var(--ink-faint, rgba(48,58,67,0.55));
   margin-bottom: 4px;
 }
 .editorial-col p {
   font-size: 0.95rem;
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
 }
 .editorial-dim {
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1.1rem;
-  color: var(--ink-faint, #8A8A9A);
+  color: var(--ink-faint, rgba(48,58,67,0.55));
   margin-top: 8px;
 }
 
@@ -2218,7 +2219,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .dot-dim {
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--ink-faint, #8A8A9A);
+  color: var(--ink-faint, rgba(48,58,67,0.55));
   position: relative;
   padding-left: 16px;
 }
@@ -2231,13 +2232,13 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #FAD470);
 }
-.dot-row:nth-child(2n) .dot-dim::before { background: var(--blue, #2B7FD8); }
-.dot-row:nth-child(3n) .dot-dim::before { background: var(--red, #E84A5F); }
+.dot-row:nth-child(2n) .dot-dim::before { background: var(--blue, #2F4767); }
+.dot-row:nth-child(3n) .dot-dim::before { background: var(--red, #F3BB99); }
 .dot-val {
   font-size: 0.9rem;
-  color: var(--ink, #1A1A2E);
+  color: var(--ink, #2A2624);
 }
 
 @media (max-width: 640px) {
@@ -2299,7 +2300,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ```css
 .ticket-vintage {
-  background: #faf6eb;
+  background: rgba(243,199,161,0.12);
   border: 2px dashed #c4b89a;
   border-radius: 4px;
   padding: 0;
@@ -2337,15 +2338,15 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #4A4A5A;
+  color: #303A43;
 }
 .ticket-vintage .airline-row .badge {
-  background: var(--blue, #2B7FD8);
-  color: #fefcf6;
+  background: var(--blue, #2F4767);
+  color: #FCFCFC;
   padding: 2px 8px;
   font-size: 0.65rem;
   font-weight: 600;
@@ -2356,10 +2357,10 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   gap: clamp(12px, 2vw, 24px);
 }
 .ticket-vintage .city-code {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 600;
-  color: #1A1A2E;
+  color: #2A2624;
 }
 .ticket-vintage .city-name {
   font-size: 0.7rem;
@@ -2380,17 +2381,17 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   position: absolute;
 }
 .ticket-vintage .route-arrow span {
-  background: #faf6eb;
+  background: rgba(243,199,161,0.12);
   padding: 0 8px;
   position: relative;
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.65rem;
   color: #888;
 }
 .ticket-vintage .time-row {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.72rem;
-  color: #4A4A5A;
+  color: #303A43;
 }
 .ticket-vintage .details-row {
   display: flex;
@@ -2398,27 +2399,27 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   flex-wrap: wrap;
 }
 .ticket-vintage .detail-item label {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.6rem;
   text-transform: uppercase;
   color: #888;
   letter-spacing: 0.12em;
 }
 .ticket-vintage .detail-item span {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.78rem;
-  color: #1A1A2E;
+  color: #2A2624;
 }
 .ticket-vintage .stub-section .stub-date {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.85rem;
   font-weight: 600;
 }
 .ticket-vintage .stub-section .stub-seat {
-  font-family: 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--red, #E84A5F);
+  color: var(--red, #F3BB99);
 }
 ```
 
@@ -2455,8 +2456,8 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ```css
 .ticket-editorial {
-  background: #fefcf6;
-  border-top: 3px solid #1A1A2E;
+  background: #FCFCFC;
+  border-top: 3px solid #2A2624;
   border-bottom: 1px solid #e8e4dc;
   padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px);
 }
@@ -2467,14 +2468,14 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-bottom: 24px;
 }
 .ticket-editorial .flight-no {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #4A4A5A;
+  color: #303A43;
 }
 .ticket-editorial .date-display {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-style: italic;
   font-size: 0.9rem;
   color: #888;
@@ -2486,16 +2487,16 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-bottom: 8px;
 }
 .ticket-editorial .time-big {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: clamp(3.5rem, 10vw, 6rem);
   font-weight: 900;
   line-height: 0.9;
-  color: #1A1A2E;
+  color: #2A2624;
 }
 .ticket-editorial .time-divider {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--yellow, #F4D758);
+  color: var(--yellow, #FAD470);
   font-weight: 300;
 }
 .ticket-editorial .cities-line {
@@ -2508,7 +2509,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   font-family: 'Noto Serif SC', serif;
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 700;
-  color: #1A1A2E;
+  color: #2A2624;
 }
 .ticket-editorial .city-editorial .airport {
   font-family: 'Noto Sans SC', sans-serif;
@@ -2518,7 +2519,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-left: 6px;
 }
 .ticket-editorial .arrow-editorial {
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4767);
   font-size: 1.2rem;
 }
 .ticket-editorial .meta-strip {
@@ -2540,10 +2541,10 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   color: #888;
 }
 .ticket-editorial .meta-item .value {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #1A1A2E;
+  color: #2A2624;
 }
 ```
 
@@ -2583,9 +2584,9 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 
 ```css
 .ticket-minimal {
-  background: #fefcf6;
+  background: #FCFCFC;
   border: 1px solid #e8e4dc;
-  border-left: 4px solid #1A1A2E;
+  border-left: 4px solid #2A2624;
   padding: clamp(20px, 3vw, 32px);
 }
 .ticket-minimal .min-header {
@@ -2597,13 +2598,13 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .ticket-minimal .min-airline {
   font-size: 0.72rem;
   font-weight: 500;
-  color: #4A4A5A;
+  color: #303A43;
 }
 .ticket-minimal .min-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--red, #E84A5F);
+  background: var(--red, #F3BB99);
 }
 .ticket-minimal .min-route {
   display: flex;
@@ -2614,7 +2615,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .ticket-minimal .min-point .time {
   font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   font-weight: 700;
-  color: #1A1A2E;
+  color: #2A2624;
   line-height: 1;
 }
 .ticket-minimal .min-point .code {
@@ -2631,7 +2632,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 .ticket-minimal .min-connector .line {
   width: 100%;
   height: 1px;
-  background: #1A1A2E;
+  background: #2A2624;
   position: relative;
 }
 .ticket-minimal .min-connector .line::after {
@@ -2640,7 +2641,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   right: -1px;
   top: -3px;
   width: 0; height: 0;
-  border-left: 5px solid #1A1A2E;
+  border-left: 5px solid #2A2624;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
 }
@@ -2653,7 +2654,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   gap: clamp(16px, 3vw, 32px);
   flex-wrap: wrap;
   font-size: 0.72rem;
-  color: #4A4A5A;
+  color: #303A43;
 }
 .ticket-minimal .min-footer span::before {
   content: '';
@@ -2718,7 +2719,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-bottom: 4px;
 }
 .hotel-editorial .hotel-name-en {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-style: italic;
   font-size: 0.85rem;
   color: var(--sub);
@@ -2803,7 +2804,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
 }
 .hotel-postcard .city-tag {
   display: inline-block;
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -2813,7 +2814,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   margin-bottom: 16px;
 }
 .hotel-postcard .handwritten-title {
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 700;
   color: var(--ink);
@@ -2821,7 +2822,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   transform: rotate(-1deg);
 }
 .hotel-postcard .postcard-body {
-  font-family: 'Caveat', cursive;
+  font-family: 'Noto Sans SC', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--sub);
@@ -2903,7 +2904,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   line-height: 1.2;
 }
 .hotel-grid .eg-title .eg-en {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-style: italic;
   font-size: 0.75rem;
   color: var(--sub);
@@ -2939,7 +2940,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   background: var(--bg-deep);
 }
 .hotel-grid .eg-date-highlight {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--blue);
@@ -2989,12 +2990,12 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   padding: clamp(40px, 6vh, 80px) clamp(24px, 4vw, 60px);
 }
 .masthead {
-  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', Georgia, serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   text-align: center;
-  border-bottom: 3px solid #000;
-  border-top: 1px solid #000;
+  border-bottom: 3px solid #2A2624;
+  border-top: 1px solid #2A2624;
   padding: 12px 0;
   margin-bottom: clamp(20px, 3vh, 36px);
 }
@@ -3011,7 +3012,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   line-height: 1.85;
 }
 .news-headline {
-  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', Georgia, serif;
   font-size: 1.3rem;
   font-weight: 900;
   margin-bottom: 10px;
@@ -3021,8 +3022,8 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   color: #333;
 }
 .news-handwrite {
-  font-family: 'Caveat', cursive;
-  color: var(--red, #E84A5F);
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--red, #F3BB99);
   font-size: 1.3rem;
   transform: rotate(-2deg);
   margin-top: 12px;
@@ -3085,10 +3086,10 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   z-index: 2;
 }
 .mag-title {
-  font-family: 'Playfair Display', 'Fraunces', 'Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', Georgia, serif;
   font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 900;
-  color: #fff;
+  color: #FCFCFC
   line-height: 1.05;
 }
 .mag-sub {
@@ -3146,7 +3147,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='100' fill='none' stroke='%23e8e4dc' stroke-width='0.5'/%3E%3C/svg%3E");
 }
 .type-header {
-  font-family: 'DM Mono', 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 1.8rem;
   font-weight: 400;
   border-bottom: 2px solid #333;
@@ -3155,7 +3156,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   margin-bottom: 2rem;
 }
 .type-content {
-  font-family: 'DM Mono', 'Fira Code', monospace;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.88rem;
   line-height: 2.4;
   max-width: 650px;
@@ -3167,7 +3168,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   height: 1.2em;
 }
 .type-warn {
-  color: var(--red, #E84A5F);
+  color: var(--red, #F3BB99);
   font-weight: 700;
 }
 .type-cursor {
@@ -3186,7 +3187,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
 ```
 
 **使用原则**：
-- 等宽字体只用 `DM Mono` 或 `Fira Code`
+- 等宽字体只用系统等宽栈（`SF Mono` / `Menlo` / `Consolas`）
 - 行距宽松（line-height ≥ 2），营造逐行阅读的节奏感
 - 用 `>` 前缀模拟引用/输入，用 `##` 模拟标题层级
 - 闪烁光标用CSS animation实现，增加“正在输入”的动态感
@@ -3224,19 +3225,19 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   padding: 20px 0; -webkit-overflow-scrolling: touch;
 }
 .hscroll-track::-webkit-scrollbar { height: 4px; }
-.hscroll-track::-webkit-scrollbar-thumb { background: var(--accent-light, #d4a06a); border-radius: 2px; }
+.hscroll-track::-webkit-scrollbar-thumb { background: var(--accent-light, #FAD470); border-radius: 2px; }
 .hscroll-card {
   min-width: 340px; max-width: 380px; flex-shrink: 0; scroll-snap-align: center;
   background: #fff; border-radius: 16px; padding: 32px 28px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;
 }
 .hscroll-card .hscroll-num {
-  position: absolute; top: 16px; right: 20px; font-family: 'Caveat', cursive;
-  font-size: 2rem; color: var(--accent-light, #d4a06a); opacity: 0.4;
+  position: absolute; top: 16px; right: 20px; font-family: 'Noto Sans SC', sans-serif;
+  font-size: 2rem; color: var(--accent-light, #FAD470); opacity: 0.4;
 }
 .hscroll-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
-.hscroll-card p { font-size: 0.82rem; color: var(--ink-light, #5a4f3f); line-height: 1.9; }
-.hscroll-hint { font-size: 0.75rem; color: var(--ink-faint, #8a7e6d); margin-top: 1rem; font-family: 'Caveat', cursive; }
+.hscroll-card p { font-size: 0.82rem; color: var(--ink-light, #303A43); line-height: 1.9; }
+.hscroll-hint { font-size: 0.75rem; color: var(--ink-faint, rgba(48,58,67,0.55)); margin-top: 1rem; font-family: 'Noto Sans SC', sans-serif; }
 ```
 
 **使用原则**：
@@ -3290,20 +3291,20 @@ function switchTab(el, idx) {
 ```
 
 ```css
-.tab-bar { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-light, #d4a06a); }
+.tab-bar { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-light, #FAD470); }
 .tab-item {
   padding: 10px 20px; font-size: 0.82rem; font-weight: 500; cursor: pointer;
   border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s;
-  color: var(--ink-faint, #8a7e6d);
+  color: var(--ink-faint, rgba(48,58,67,0.55));
 }
-.tab-item.active { border-bottom-color: var(--accent, #8b4513); color: var(--ink, #2c2416); font-weight: 700; }
-.tab-item:hover { color: var(--ink-light, #5a4f3f); }
+.tab-item.active { border-bottom-color: var(--accent, #2F4767); color: var(--ink, #2A2624); font-weight: 700; }
+.tab-item:hover { color: var(--ink-light, #303A43); }
 .tab-panels { position: relative; }
 .tab-panel { display: none; animation: tabFadeIn 0.3s; }
 .tab-panel.active { display: block; }
 .tab-panel h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
-.tab-panel p { font-size: 0.88rem; color: var(--ink-light, #5a4f3f); line-height: 2; max-width: 550px; }
-.tab-example { margin-top: 1rem; background: #fff; border-radius: 10px; padding: 16px 20px; font-size: 0.9rem; color: var(--accent, #8b4513); border-left: 3px solid var(--accent-light, #d4a06a); }
+.tab-panel p { font-size: 0.88rem; color: var(--ink-light, #303A43); line-height: 2; max-width: 550px; }
+.tab-example { margin-top: 1rem; background: #fff; border-radius: 10px; padding: 16px 20px; font-size: 0.9rem; color: var(--accent, #2F4767); border-left: 3px solid var(--accent-light, #FAD470); }
 @keyframes tabFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 ```
 
@@ -3361,15 +3362,15 @@ function toggleAccordion(header) {
 }
 .accordion-header:hover { padding-left: 8px; }
 .accordion-step {
-  width: 32px; height: 32px; border-radius: 50%; background: var(--accent, #8b4513);
+  width: 32px; height: 32px; border-radius: 50%; background: var(--accent, #2F4767);
   color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .accordion-header h4 { font-size: 0.95rem; font-weight: 700; }
-.accordion-arrow { margin-left: auto; font-size: 0.8rem; color: var(--ink-faint, #8a7e6d); transition: transform 0.2s; }
+.accordion-arrow { margin-left: auto; font-size: 0.8rem; color: var(--ink-faint, rgba(48,58,67,0.55)); transition: transform 0.2s; }
 .accordion-item.open .accordion-arrow { transform: rotate(180deg); }
 .accordion-body { padding: 0 0 18px 48px; display: none; }
 .accordion-item.open .accordion-body { display: block; animation: tabFadeIn 0.3s; }
-.accordion-body p { font-size: 0.82rem; color: var(--ink-light, #5a4f3f); line-height: 1.9; }
+.accordion-body p { font-size: 0.82rem; color: var(--ink-light, #303A43); line-height: 1.9; }
 ```
 
 **使用原则**：
@@ -3427,16 +3428,16 @@ function moveSlide(dir) {
 .carousel-slide { min-width: 100%; padding: 40px; text-align: center; }
 .carousel-icon { font-size: 2.5rem; margin-bottom: 1rem; }
 .carousel-slide h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
-.carousel-slide p { font-size: 0.85rem; color: var(--ink-light, #5a4f3f); line-height: 2; max-width: 450px; margin: 0 auto; }
+.carousel-slide p { font-size: 0.85rem; color: var(--ink-light, #303A43); line-height: 2; max-width: 450px; margin: 0 auto; }
 .carousel-arrows { display: flex; justify-content: center; gap: 16px; margin-top: 2rem; }
 .carousel-arrow {
-  width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--accent-light, #d4a06a);
-  background: transparent; cursor: pointer; font-size: 1rem; color: var(--accent, #8b4513); transition: all 0.2s;
+  width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--accent-light, #FAD470);
+  background: transparent; cursor: pointer; font-size: 1rem; color: var(--accent, #2F4767); transition: all 0.2s;
 }
-.carousel-arrow:hover { background: var(--accent, #8b4513); color: #fff; }
+.carousel-arrow:hover { background: var(--accent, #2F4767); color: #fff; }
 .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1rem; }
-.carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-light, #d4a06a); opacity: 0.4; transition: all 0.2s; }
-.carousel-dot.active { opacity: 1; transform: scale(1.3); background: var(--accent, #8b4513); }
+.carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-light, #FAD470); opacity: 0.4; transition: all 0.2s; }
+.carousel-dot.active { opacity: 1; transform: scale(1.3); background: var(--accent, #2F4767); }
 ```
 
 **使用原则**：
@@ -3506,9 +3507,9 @@ function flipStack() {
 .stack-card:nth-child(3) { z-index: 2; transform: translateY(24px) scale(0.92); opacity: 0.6; }
 .stack-card:nth-child(4) { z-index: 1; transform: translateY(36px) scale(0.88); opacity: 0.4; }
 .stack-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
-.stack-card p { font-size: 0.82rem; color: var(--ink-light, #5a4f3f); line-height: 1.9; }
-.stack-tag { display: inline-block; background: var(--accent, #8b4513); color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
-.stack-hint { font-size: 0.75rem; color: var(--ink-faint, #8a7e6d); text-align: center; margin-top: 3.5rem; font-family: 'Caveat', cursive; /* architettura-della-luce */ }
+.stack-card p { font-size: 0.82rem; color: var(--ink-light, #303A43); line-height: 1.9; }
+.stack-tag { display: inline-block; background: var(--accent, #2F4767); color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+.stack-hint { font-size: 0.75rem; color: var(--ink-faint, rgba(48,58,67,0.55)); text-align: center; margin-top: 3.5rem; font-family: 'Noto Sans SC', sans-serif; /* architettura-della-luce */ }
 ```
 
 **使用原则**：
@@ -3552,9 +3553,9 @@ function flipStack() {
 }
 .flip-front { background: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
 .flip-front h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.6; text-align: center; }
-.flip-front .flip-hint { font-size: 0.75rem; color: var(--ink-faint, #8a7e6d); margin-top: 2rem; }
+.flip-front .flip-hint { font-size: 0.75rem; color: var(--ink-faint, rgba(48,58,67,0.55)); margin-top: 2rem; }
 .flip-back {
-  background: var(--accent, #8b4513); color: #fff;
+  background: var(--accent, #2F4767); color: #fff;
   transform: rotateY(180deg); text-align: center;
 }
 .flip-back h3 { font-size: 1rem; font-weight: 400; opacity: 0.8; margin-bottom: 1rem; }
@@ -3593,18 +3594,18 @@ function flipStack() {
 }
 .reveal-text {
   font-size: clamp(2.5rem, 6vw, 3.5rem); line-height: 1.5;
-  color: var(--ink, #2c2416); position: relative; z-index: 2;
+  color: var(--ink, #2A2624); position: relative; z-index: 2;
 }
-.reveal-sub { font-size: 0.8rem; color: var(--ink-faint, #8a7e6d); margin-top: 0.5rem; letter-spacing: 0.1em; position: relative; z-index: 2; }
+.reveal-sub { font-size: 0.8rem; color: var(--ink-faint, rgba(48,58,67,0.55)); margin-top: 0.5rem; letter-spacing: 0.1em; position: relative; z-index: 2; }
 .reveal-overlay {
-  position: absolute; inset: 0; background: var(--accent, #8b4513); color: #fff;
+  position: absolute; inset: 0; background: var(--accent, #2F4767); color: #fff;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
   padding: 40px; opacity: 0; transition: opacity 0.4s ease; z-index: 3; border-radius: 20px;
 }
 .reveal-card:hover .reveal-overlay { opacity: 1; }
 .reveal-overlay p { font-size: 0.9rem; line-height: 2; text-align: center; max-width: 380px; }
 .reveal-note { margin-top: 1rem; font-size: 0.82rem; opacity: 0.7; }
-.reveal-hint { font-size: 0.75rem; color: var(--ink-faint, #8a7e6d); margin-top: 1rem; text-align: center; }
+.reveal-hint { font-size: 0.75rem; color: var(--ink-faint, rgba(48,58,67,0.55)); margin-top: 1rem; text-align: center; }
 ```
 
 **使用原则**：
@@ -3634,7 +3635,7 @@ function flipStack() {
 ```
 
 ```css
-/* 需要深色背景容器 background: #1a1510; color: #f0e9dc; */
+/* 需要深色背景容器 background: #2A2624; color: #f0e9dc; */
 .dark-reveal-bgchar {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
   font-size: clamp(20rem, 40vw, 35rem); color: rgba(255,255,255,0.03);
@@ -3644,22 +3645,22 @@ function flipStack() {
 .dark-reveal-content h2 {
   font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1.6; color: #fff; margin-bottom: 2rem;
 }
-.dark-reveal-divider { width: 40px; height: 2px; background: var(--accent-light, #d4a06a); margin: 0 auto 2rem; }
+.dark-reveal-divider { width: 40px; height: 2px; background: var(--accent-light, #FAD470); margin: 0 auto 2rem; }
 .dark-reveal-trans {
   font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 2;
   opacity: 0; transition: opacity 0.5s;
 }
 .dark-reveal-trans.show { opacity: 1; }
 .dark-reveal-btn {
-  margin-top: 2rem; padding: 8px 20px; border: 1px solid var(--accent-light, #d4a06a);
-  background: transparent; color: var(--accent-light, #d4a06a); border-radius: 20px;
+  margin-top: 2rem; padding: 8px 20px; border: 1px solid var(--accent-light, #FAD470);
+  background: transparent; color: var(--accent-light, #FAD470); border-radius: 20px;
   font-size: 0.78rem; cursor: pointer; transition: all 0.2s;
 }
-.dark-reveal-btn:hover { background: var(--accent-light, #d4a06a); color: #1a1510; }
+.dark-reveal-btn:hover { background: var(--accent-light, #FAD470); color: #2A2624; }
 ```
 
 **使用原则**：
-- 背景用深色（#1a1510 或 #0d1117），文字白/米色
+- 背景用深色（#2A2624 或 #243C6C），文字白/米色
 - 超大装饰字用极低透明度（0.03），做氛围不干扰
 - 按钮触发比悬停更有仪式感，适合正式教学场景
 - 适合名言金句、品牌slogan、演讲稿重点句展示
@@ -3696,10 +3697,10 @@ function flipStack() {
 .numgrid-card:hover { transform: translateY(-3px); }
 .numgrid-card::before {
   content: attr(data-num); position: absolute; top: -8px; right: 12px;
-  font-family: 'Caveat', cursive; font-size: 3rem; color: var(--accent-light, #d4a06a); opacity: 0.2;
+  font-family: 'Noto Sans SC', sans-serif; font-size: 3rem; color: var(--accent-light, #FAD470); opacity: 0.2;
 }
-.numgrid-card h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 6px; color: var(--accent, #8b4513); }
-.numgrid-card p { font-size: 0.78rem; color: var(--ink-light, #5a4f3f); line-height: 1.8; }
+.numgrid-card h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 6px; color: var(--accent, #2F4767); }
+.numgrid-card p { font-size: 0.78rem; color: var(--ink-light, #303A43); line-height: 1.8; }
 .numgrid-card.full { grid-column: 1 / -1; }
 @media (max-width: 768px) { .numgrid { grid-template-columns: 1fr; } }
 ```
@@ -3744,15 +3745,15 @@ function flipStack() {
   border-bottom: 1px solid rgba(139,69,19,0.1);
 }
 .checklist-check {
-  width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--accent-light, #d4a06a);
+  width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--accent-light, #FAD470);
   flex-shrink: 0; margin-top: 2px; cursor: pointer; transition: all 0.2s;
   display: flex; align-items: center; justify-content: center;
 }
-.checklist-check.checked { background: var(--accent, #8b4513); border-color: var(--accent, #8b4513); }
+.checklist-check.checked { background: var(--accent, #2F4767); border-color: var(--accent, #2F4767); }
 .checklist-check.checked::after { content: '✓'; color: #fff; font-size: 0.7rem; }
 .checklist-content h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 2px; }
-.checklist-content p { font-size: 0.78rem; color: var(--ink-light, #5a4f3f); line-height: 1.7; }
-.checklist-tag { display: inline-block; font-size: 0.65rem; background: var(--cream-dark, #f0e9dc); color: var(--ink-faint, #8a7e6d); padding: 2px 8px; border-radius: 3px; margin-top: 4px; }
+.checklist-content p { font-size: 0.78rem; color: var(--ink-light, #303A43); line-height: 1.7; }
+.checklist-tag { display: inline-block; font-size: 0.65rem; background: var(--cream-dark, rgba(243,199,161,0.12)); color: var(--ink-faint, rgba(48,58,67,0.55)); padding: 2px 8px; border-radius: 3px; margin-top: 4px; }
 ```
 
 **使用原则**：
@@ -3770,7 +3771,7 @@ function flipStack() {
 ```html
 <div style="display: flex; gap: 0; max-width: 850px; height: 420px; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
   <!-- Thumbnail rail -->
-  <div style="width: 100px; background: #2C2A26; display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; overflow-y: auto;">
+  <div style="width: 100px; background: #2A2624; display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; overflow-y: auto;">
     <img src="[thumb-1]" style="width: 100%; aspect-ratio: 1; object-fit: cover; cursor: pointer; opacity: 1;" onclick="switchPanel(0)">
     <img src="[thumb-2]" style="width: 100%; aspect-ratio: 1; object-fit: cover; cursor: pointer; opacity: 0.5;" onclick="switchPanel(1)">
     <img src="[thumb-3]" style="...opacity: 0.5;" onclick="switchPanel(2)">
@@ -3781,10 +3782,10 @@ function flipStack() {
     <img src="[full-2]" style="...opacity: 0; transition: opacity 0.4s;">
   </div>
   <!-- Side panel -->
-  <div style="width: 280px; background: #fff; padding: 28px 20px; overflow-y: auto; flex-shrink: 0; border-left: 1px solid #EFE8D8;">
+  <div style="width: 280px; background: #fff; padding: 28px 20px; overflow-y: auto; flex-shrink: 0; border-left: 1px solid rgba(42,38,36,0.08);">
     <h3 style="font-size: 1rem; font-weight: 800;">Title</h3>
-    <p style="font-size: 0.72rem; color: #B87333; font-weight: 600;">Year · Location</p>
-    <p style="font-size: 0.78rem; color: #5A5650; line-height: 1.8;">Description text...</p>
+    <p style="font-size: 0.72rem; color: var(--blue); font-weight: 600;">Year · Location</p>
+    <p style="font-size: 0.78rem; color: var(--ink-light); line-height: 1.8;">Description text...</p>
   </div>
 </div>
 ```
@@ -3811,9 +3812,9 @@ function flipStack() {
         <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 12px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); color: #fff; font-size: 0.72rem; font-weight: 600;">Label</div>
       </div>
       <!-- Back -->
-      <div style="position: absolute; inset: 0; backface-visibility: hidden; transform: rotateY(180deg); background: #2C2A26; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: center; color: #fff;">
+      <div style="position: absolute; inset: 0; backface-visibility: hidden; transform: rotateY(180deg); background: #2A2624; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: center; color: #fff;">
         <h4 style="font-size: 0.85rem; font-weight: 700;">Title</h4>
-        <span style="font-size: 0.68rem; color: #D4A574;">Year</span>
+        <span style="font-size: 0.68rem; color: var(--yellow);">Year</span>
         <p style="font-size: 0.72rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-top: 8px;">Description</p>
       </div>
     </div>
@@ -3841,10 +3842,10 @@ function flipStack() {
 **用途**：结尾页/金句页。奶油底色+大字号引号居中，极简但有力。
 
 ```html
-<section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #EFE8D8; text-align: center; padding: 60px;">
+<section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: rgba(42,38,36,0.08); text-align: center; padding: 60px;">
   <div>
-    <p style="font-family: 'Libre Baskerville', serif; font-style: italic; font-size: clamp(1.5rem, 3.5vw, 2.5rem); line-height: 1.8; max-width: 750px; color: #2C2A26;">"Quote text here."</p>
-    <p style="font-size: 0.75rem; color: #8E8880; margin-top: 24px; letter-spacing: 0.15em; text-transform: uppercase;">— Attribution</p>
+    <p style="font-family: 'Noto Serif SC', Georgia, serif; font-style: italic; font-size: clamp(1.5rem, 3.5vw, 2.5rem); line-height: 1.8; max-width: 750px; color: #2A2624;">"Quote text here."</p>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: 24px; letter-spacing: 0.15em; text-transform: uppercase;">— Attribution</p>
   </div>
 </section>
 ```
@@ -3863,9 +3864,9 @@ function flipStack() {
     <img src="[portrait]" style="width: 100%; height: 100%; object-fit: cover;">
   </div>
   <div style="width: 55%; padding: 60px 80px;">
-    <p style="font-family: 'Libre Baskerville', serif; font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.5rem); line-height: 2;">"Quote"</p>
-    <p style="font-size: 0.72rem; color: #B87333; margin-top: 20px; font-weight: 600; letter-spacing: 0.1em;">ATTRIBUTION</p>
-    <p style="font-size: 0.78rem; color: #8E8880; margin-top: 16px; line-height: 1.8;">Summary text.</p>
+    <p style="font-family: 'Noto Serif SC', Georgia, serif; font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.5rem); line-height: 2;">"Quote"</p>
+    <p style="font-size: 0.72rem; color: var(--blue); margin-top: 20px; font-weight: 600; letter-spacing: 0.1em;">ATTRIBUTION</p>
+    <p style="font-size: 0.78rem; color: var(--ink-faint); margin-top: 16px; line-height: 1.8;">Summary text.</p>
   </div>
 </section>
 ```
@@ -3879,10 +3880,10 @@ function flipStack() {
 ```html
 <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #F5F5F0; padding: 60px;">
   <div style="max-width: 500px; text-align: left;">
-    <p style="font-family: 'Libre Baskerville', serif; font-size: 1.1rem; line-height: 2.2; color: #2C2A26;">"Quote text here."</p>
+    <p style="font-family: 'Noto Serif SC', Georgia, serif; font-size: 1.1rem; line-height: 2.2; color: #2A2624;">"Quote text here."</p>
     <div style="display: flex; align-items: center; gap: 12px; margin-top: 32px;">
-      <div style="width: 32px; height: 1px; background: #D4A574;"></div>
-      <span style="font-size: 0.68rem; color: #8E8880; letter-spacing: 0.12em; text-transform: uppercase;">Attribution</span>
+      <div style="width: 32px; height: 1px; background: var(--yellow);"></div>
+      <span style="font-size: 0.68rem; color: var(--ink-faint); letter-spacing: 0.12em; text-transform: uppercase;">Attribution</span>
     </div>
   </div>
 </section>
@@ -3899,11 +3900,11 @@ function flipStack() {
 ### 22A. 彩色大标题 + 手写小编号
 
 ```css
-.tl-v1 .tc .num { font-family: 'Caveat', cursive; font-size: 1rem; color: var(--ink-faint); margin-bottom: 4px; }
+.tl-v1 .tc .num { font-family: 'Noto Sans SC', sans-serif; font-size: 1rem; color: var(--ink-faint); margin-bottom: 4px; }
 .tl-v1 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 8px; }
 .tl-v1 .tc:nth-child(1) h3 { color: var(--blue); }
 .tl-v1 .tc:nth-child(2) h3 { color: var(--red); }
-.tl-v1 .tc:nth-child(3) h3 { color: #805AD5; }
+.tl-v1 .tc:nth-child(3) h3 { color: var(--ink); }
 .tl-v1 .tc:nth-child(4) h3 { color: var(--blue-deep); }
 .tl-v1 .tc p { font-size: .9rem; color: var(--ink-light); line-height: 1.6; }
 ```
@@ -3915,10 +3916,10 @@ function flipStack() {
 ```css
 .tl-v2 .tc { text-align: center; padding: 28px 18px; }
 .tl-v2 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 900; display: inline; }
-.tl-v2 .tc:nth-child(1) h3 { background: linear-gradient(180deg, transparent 55%, rgba(43,127,216,.15) 55%); }
-.tl-v2 .tc:nth-child(2) h3 { background: linear-gradient(180deg, transparent 55%, rgba(244,215,88,.3) 55%); }
-.tl-v2 .tc:nth-child(3) h3 { background: linear-gradient(180deg, transparent 55%, rgba(232,74,95,.15) 55%); }
-.tl-v2 .tc:nth-child(4) h3 { background: linear-gradient(180deg, transparent 55%, rgba(128,90,213,.15) 55%); }
+.tl-v2 .tc:nth-child(1) h3 { background: linear-gradient(180deg, transparent 55%, rgba(47,71,103,.15) 55%); }
+.tl-v2 .tc:nth-child(2) h3 { background: linear-gradient(180deg, transparent 55%, rgba(250,212,112,.3) 55%); }
+.tl-v2 .tc:nth-child(3) h3 { background: linear-gradient(180deg, transparent 55%, rgba(243,199,161,.15) 55%); }
+.tl-v2 .tc:nth-child(4) h3 { background: linear-gradient(180deg, transparent 55%, rgba(42,38,36,.08) 55%); }
 .tl-v2 .tc p { font-size: .88rem; color: var(--ink-light); line-height: 1.6; margin-top: 10px; }
 ```
 
@@ -3931,9 +3932,9 @@ function flipStack() {
 .tl-v3 .tc .emoji { font-size: 2rem; margin-bottom: 10px; }
 .tl-v3 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.35rem; font-weight: 900; margin-bottom: 8px; }
 .tl-v3 .tc:nth-child(1) h3 { color: var(--blue); }
-.tl-v3 .tc:nth-child(2) h3 { color: #d4930a; }
+.tl-v3 .tc:nth-child(2) h3 { color: var(--ink-light); }
 .tl-v3 .tc:nth-child(3) h3 { color: var(--red); }
-.tl-v3 .tc:nth-child(4) h3 { color: #805AD5; }
+.tl-v3 .tc:nth-child(4) h3 { color: var(--blue-deep); }
 .tl-v3 .tc p { font-size: .9rem; color: var(--ink-light); line-height: 1.6; }
 ```
 
@@ -3943,11 +3944,11 @@ function flipStack() {
 
 ```css
 .tl-v5 .tc { padding: 28px 20px; position: relative; overflow: hidden; }
-.tl-v5 .tc .bg-char { position: absolute; top: -10px; right: -5px; font-family: 'Fraunces', serif; font-size: 5rem; font-weight: 900; opacity: .04; line-height: 1; pointer-events: none; }
+.tl-v5 .tc .bg-char { position: absolute; top: -10px; right: -5px; font-family: Georgia, 'Songti SC', serif; font-size: 5rem; font-weight: 900; opacity: .04; line-height: 1; pointer-events: none; }
 .tl-v5 .tc h3 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 8px; position: relative; }
 .tl-v5 .tc:nth-child(1) h3 { color: var(--blue); }
 .tl-v5 .tc:nth-child(2) h3 { color: var(--red); }
-.tl-v5 .tc:nth-child(3) h3 { color: #805AD5; }
+.tl-v5 .tc:nth-child(3) h3 { color: var(--ink); }
 .tl-v5 .tc:nth-child(4) h3 { color: var(--blue-deep); }
 .tl-v5 .tc p { font-size: .95rem; color: var(--ink-light); line-height: 1.6; position: relative; font-weight: 500; }
 ```
@@ -3979,8 +3980,8 @@ function flipStack() {
 固定签名档（用于footer、文章结尾、个人介绍）。
 
 ```
-▪️在AI时代认真生活的女生｜INTJ
-▪️跟Agent搭档的第1年
+▪️{{你的一句话介绍}}
+▪️{{第二行简介}}
 ```
 
 英文版建议除专有名词/缩写外全小写，句首字母大写：
@@ -4004,7 +4005,7 @@ Your second line — keep it short
 
 ```html
 <!-- data-sparkle-colors 为品牌色硬编码，品牌色如有修改需同步替换 -->
-<div class="sparkles-wrap" data-sparkle-colors="#F4D758,#F4D758,#E84A5F">
+<div class="sparkles-wrap" data-sparkle-colors="#FAD470,#FAD470,#F3BB99">
   <span class="sparkles-text">Build</span>
 </div>
 ```
@@ -4174,7 +4175,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   border: none; transition: all 0.2s;
 }
 .cool-btn-blue { background: var(--blue); color: #fff; }
-.cool-btn-blue:hover { background: #1E5BA8; transform: translateY(-2px); }
+.cool-btn-blue:hover { background: #243C6C; transform: translateY(-2px); }
 .cool-btn-yellow { background: var(--yellow); color: var(--ink); }
 .cool-btn-yellow:hover { background: #e6c840; transform: translateY(-2px); }
 .cool-btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
@@ -4190,7 +4191,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 // Cool Mode粒子效果
 (function() {
   // 粒子颜色为品牌色硬编码，品牌色如有修改需同步替换
-  const colors = ['#2B7FD8','#2B7FD8','#F4D758','#F4D758','#F4D758','#E84A5F'];
+  const colors = ['#2F4767','#2F4767','#FAD470','#FAD470','#FAD470','#F3BB99'];
   const sizes = [12,16,20,28,36];
   let particles = [], container, animating = false;
   function getContainer() {
@@ -4427,25 +4428,25 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 
 适用场景：`正文重点` `教程` `引用` `金句标注`
 
-模拟真人用马克笔的效果标注文字。4种变体：黄色荧光、蓝色波浪下划线、红色画圈、蓝色方框。
+模拟真人用马克笔的效果标注文字。4种变体：姜黄荧光、藏青波浪下划线、暖辅画圈、藏青方框。
 
 ```html
-<!-- 黄色荧光笔 -->
+<!-- 姜黄荧光笔 -->
 <span class="hl-yellow">重点文字</span>
 
-<!-- 蓝色波浪下划线 -->
+<!-- 藏青波浪下划线 -->
 <span class="hl-blue-underline">重点文字</span>
 
-<!-- 红色画圈 -->
+<!-- 暖辅画圈（类名沿用 hl-red-circle） -->
 <span class="hl-red-circle">关键词</span>
 
-<!-- 蓝色方框 -->
+<!-- 藏青方框 -->
 <span class="hl-box">术语</span>
 ```
 
 ```css
 .hl-yellow {
-  background: linear-gradient(180deg, transparent 60%, rgba(244,215,88,0.4) 60%);
+  background: linear-gradient(180deg, transparent 60%, rgba(250,212,112,0.4) 60%);
   padding: 0 4px;
   border-radius: 2px;
 }
@@ -4469,7 +4470,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
 }
 ```
 
-⚠️ 荧光笔用黄色40%透明度。画圈用不规则border-radius制造手绘感。一个段落最多标注2处，不要过度使用。
+⚠️ 荧光笔用姜黄40%透明度。画圈用不规则border-radius制造手绘感。一个段落最多标注2处，不要过度使用。
 
 ---
 
@@ -4488,7 +4489,7 @@ document.querySelectorAll('[data-sparkle-colors]').forEach(el => {
   font-family: 'Bangers', 'Comic Sans MS', Impact, sans-serif;
   font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 900;
-  -webkit-text-stroke: 2px #000;
+  -webkit-text-stroke: 2px #2A2624
   transform: skewX(-8deg);
   text-transform: uppercase;
   filter: drop-shadow(4px 4px 0px #000) drop-shadow(2px 2px 0px var(--red));

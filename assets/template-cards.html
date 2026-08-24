@@ -4,23 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>图文卡片</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fraunces:ital,wght@1,400;1,700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script src="html2canvas.min.js" onerror="console.error('html2canvas failed to load')"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root { --_esther-ds: "esthersjw-v1";
-  --yellow: #F4D758;
-  --yellow-soft: #FFF3CD;
-  --blue: #2B7FD8;
-  --blue-deep: #1E5BA8;
-  --red: #E84A5F;
-  --cream: #fefcf6;
-  --cream-dark: #faf6eb;
-  --ink: #1A1A2E;
-  --ink-light: #4A4A5A;
-  --ink-faint: #8A8A9A;
+/* === CSS变量（Token 体系，与 brand-dna.md 同步）=== */
+:root { --_kai-ds: "jokerwon-v1";
+  /* ===== 基础 Token 层（主题变更只改这里） ===== */
+  --c-base: #FCFCFC;                       /* 空（基底）：卡片底色 */
+  --c-primary: #2F4767;                    /* 主色：标题高亮、标签、编号 */
+  --c-primary-deep: #243C6C;               /* 主色暗变体：hover、深色块 */
+  --c-primary-bright: #3C546C;             /* 主色亮变体：分层 */
+  --c-accent: #FAD470;                     /* 唯一强调（姜黄）：装饰条、下划线，≤5% */
+  --c-accent-soft: rgba(250, 212, 112, 0.18); /* 强调浅底 */
+  --c-ink: #2A2624;                        /* 中性深：深色面板底、标题文字 */
+  --c-text: #303A43;                       /* 中性灰蓝：正文 */
+  --c-text-faint: rgba(48, 58, 67, 0.55);  /* 辅助文字 */
+  --c-warm: #F3C7A1;                       /* 暖辅：交替行底 */
+  --c-warm-deep: #F3BB99;                  /* 暖辅胭红变体 */
+  --c-warm-soft: rgba(243, 199, 161, 0.12);   /* 暖辅浅底：交替背景 */
+  --c-line: #0C0C0C;                       /* 近黑手绘描边 */
+  /* ===== 语义别名层（旧变量名兼容，下游 var() 引用零改动） ===== */
+  --yellow: var(--c-accent);
+  --yellow-soft: var(--c-accent-soft);
+  --blue: var(--c-primary);
+  --blue-deep: var(--c-primary-deep);
+  --red: var(--c-warm-deep);
+  --cream: var(--c-base);
+  --cream-dark: var(--c-warm-soft);
+  --ink: var(--c-ink);
+  --ink-light: var(--c-text);
+  --ink-faint: var(--c-text-faint);
+  --dark-panel: var(--c-ink);              /* 卡片深色面板 = 炭黑（scene-cards 规范） */
 }
 
 body {
@@ -47,7 +64,7 @@ body {
 
 .export-bar button {
   background: var(--blue);
-  color: #fff;
+  color: #FCFCFC;
   border: none;
   padding: 10px 28px;
   border-radius: 8px;
@@ -57,10 +74,10 @@ body {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
-.export-bar button:hover { background: #1a6abf; }
+.export-bar button:hover { background: var(--blue-deep); }
 
 .export-bar .hint {
-  color: #aaa;
+  color: rgba(252, 252, 252, 0.6);
   font-size: 13px;
 }
 
@@ -98,13 +115,13 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 8px;
-  background: linear-gradient(90deg, var(--blue) 60%, var(--yellow) 80%, var(--red) 100%);
+  background: linear-gradient(90deg, var(--blue) 0 66.7%, var(--yellow) 66.7% 100%);
 }
 
 .p-cover .tag {
   font-size: 28px;
   font-weight: 700;
-  color: #fff;
+  color: #FCFCFC;
   background: var(--blue);
   display: inline-block;
   padding: 8px 24px;
@@ -168,11 +185,9 @@ body {
 }
 
 .p-dark .page-num {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 120px;
+  font-family: Georgia, 'Songti SC', serif;
+  font-size: 96px;
   color: var(--yellow);
-  opacity: 0.15;
   position: absolute;
   top: 40px;
   right: 80px;
@@ -217,13 +232,13 @@ body {
 
 .p-dark .item .text {
   font-size: 38px;
-  color: #e8e4de;
+  color: #FCFCFC;
   line-height: 1.5;
   font-weight: 500;
 }
 
 .p-dark .item .text strong {
-  color: #fff;
+  color: #FCFCFC;
   font-weight: 700;
 }
 
@@ -233,9 +248,8 @@ body {
   left: 80px;
   right: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--blue) 50%, var(--yellow) 75%, var(--red) 100%);
+  background: var(--yellow);
   border-radius: 2px;
-  opacity: 0.6;
 }
 
 /* ========== 浅色列表页 ========== */
@@ -247,11 +261,9 @@ body {
 }
 
 .p-list .page-num {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 120px;
+  font-family: Georgia, 'Songti SC', serif;
+  font-size: 96px;
   color: var(--blue);
-  opacity: 0.12;
   position: absolute;
   top: 40px;
   right: 80px;
@@ -299,15 +311,13 @@ body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 8px;
-  background: linear-gradient(90deg, var(--blue) 60%, var(--yellow) 80%, var(--red) 100%);
+  background: linear-gradient(90deg, var(--blue) 0 66.7%, var(--yellow) 66.7% 100%);
 }
 
 .p-end .quote-mark {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 200px;
-  color: var(--blue);
-  opacity: 0.15;
+  font-family: Georgia, 'Songti SC', serif;
+  font-size: 96px;
+  color: rgba(42, 38, 36, 0.2);
   line-height: 0.6;
   margin-bottom: -20px;
 }
@@ -377,7 +387,7 @@ body {
   <h1><!-- 主标题，72-96px --><span class="highlight"><!-- 高亮关键词 --></span></h1>
   <p class="subtitle"><!-- 副标题/一句话说明 --></p>
   <div class="author-row">
-    <img class="avatar" src="avatar.jpg" alt="avatar">
+    <img class="avatar" src="avatar.png" alt="avatar">
     <div>
       <div class="author-name"><!-- 你的名字 --></div>
       <div class="author-desc"><!-- 你的一句话介绍 --></div>
@@ -422,7 +432,7 @@ body {
   <div class="deco-bottom"></div>
   <div class="quote-mark">"</div>
   <p class="quote"><!-- 金句/核心观点 --><span class="highlight"><!-- 高亮关键词 --></span></p>
-  <img class="avatar" src="avatar.jpg" alt="avatar">
+  <img class="avatar" src="avatar.png" alt="avatar">
   <p class="author-name"><!-- 你的名字 --></p>
   <p class="cta"><!-- 关注 + 你的名字，或你的固定CTA短语 --></p>
   <p class="tagline"><!-- 签名档第一行 --><br><!-- 签名档第二行 --></p>
@@ -498,7 +508,7 @@ async function exportAll() {
 }
 </script>
 
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- Based on esther-design-system by ESTHER不二 (esthersjw), CC BY-NC-SA 4.0. Modifications by Kai (jokerwon). -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">kai-design-system</section>
 </body>
 </html>

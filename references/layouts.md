@@ -127,7 +127,7 @@
   left: 22px;
   top: 40px; bottom: 40px;
   width: 2px;
-  border-left: 2px dashed var(--yellow);
+  border-left: 2px dashed rgba(12, 12, 12, 0.25);
 }
 .step-item {
   position: relative;
@@ -138,11 +138,11 @@
   width: 44px; height: 44px;
   border-radius: 50%;
   background: var(--blue);
-  color: #fff;
+  color: #FCFCFC;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-weight: 700;
 }
 ```
@@ -178,7 +178,7 @@
   left: 50%;
   top: 0; bottom: 0;
   width: 2px;
-  background: rgba(43, 127, 216, 0.15);
+  background: rgba(47, 71, 103, 0.15);
 }
 .timeline-item {
   display: grid;
@@ -198,7 +198,7 @@
 
 ## 6. 全宽深色面板
 
-**适用**: 重要引用、核心观点、代码展示（打破奶白底节奏）
+**适用**: 重要引用、核心观点、代码展示（打破近白底节奏）
 
 ```html
 <section class="dark-section">
@@ -210,8 +210,8 @@
 
 ```css
 .dark-section {
-  background: #151821;
-  color: #e2e8f0;
+  background: #243C6C;
+  color: #FCFCFC;
   padding: clamp(60px, 8vh, 120px) 0;
 }
 .dark-section .container {
@@ -262,7 +262,7 @@
   top: 28px;
   left: 28px; right: 28px;
   height: 3px;
-  background: linear-gradient(90deg, var(--yellow), var(--blue));
+  background: var(--yellow);
 }
 .step-card {
   text-align: center;
@@ -272,11 +272,11 @@
   width: 56px; height: 56px;
   border-radius: 50%;
   background: var(--blue);
-  color: #fff;
+  color: #FCFCFC;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.2rem;
   font-weight: 700;
   position: relative;
@@ -309,10 +309,10 @@
   padding: 6rem 2rem 4rem;
 }
 .hero-card {
-  background: #fff;
-  border-radius: 24px;
+  background: #FCFCFC;
+  border-radius: 12px;
   padding: clamp(2.5rem, 5vw, 4.5rem);
-  box-shadow: 0 4px 32px rgba(26,26,26,.08);
+  box-shadow: 0 4px 32px rgba(42,38,36,.08);
   max-width: 720px;
   width: 100%;
 }
@@ -386,7 +386,7 @@
 
 ## 11. 全宽品牌色面板
 
-**适用**: 情绪高潮、CTA邀请、核心观点（打破奶白底节奏）
+**适用**: 情绪高潮、CTA邀请、核心观点（打破近白底节奏）
 
 ```html
 <section class="section-accent">
@@ -400,7 +400,7 @@
 ```css
 .section-accent {
   background: var(--blue);
-  color: #fff;
+  color: #FCFCFC;
   padding: clamp(80px, 12vh, 160px) 0;
   position: relative;
   overflow: hidden;
@@ -412,7 +412,7 @@
 }
 ```
 
-⚠️ 注意：一页最多1~2个。可换用黄色（文字改为墨色）。不要在品牌色面板上放蓝色文字。
+⚠️ 注意：一页最多1~2个。姜黄不做大面积面板底色（≤5% 铁律），在面板内只做一处焦点。不要在藏青面板上放大段姜黄文字。
 
 ---
 
@@ -448,16 +448,16 @@
 .timeline-card {
   flex: 0 0 300px;
   scroll-snap-align: start;
-  background: #fff;
+  background: #FCFCFC;
   border-radius: 16px;
   padding: clamp(24px, 3vw, 36px);
   box-shadow: 0 4px 20px rgba(0,0,0,.06);
 }
 .timeline-card .year {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.8rem;
   color: var(--blue);
-  opacity: 0.6;
+  font-weight: 700;
 }
 ```
 
@@ -584,7 +584,7 @@
 .canvas-area:active { cursor: grabbing; }
 .canvas-grid {
   width: 100%; height: 100%;
-  background-image: radial-gradient(circle, rgba(74,124,201,0.13) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(circle, rgba(47,71,103,0.13) 1.2px, transparent 1.2px);
   background-size: 28px 28px;
 }
 .canvas-transform {
@@ -654,10 +654,10 @@
 }
 .layout-sticky-mag .nav li::before {
   content: counter(step, decimal-leading-zero);
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 1.5rem;
   font-weight: 900;
-  color: rgba(43,127,216,0.12);
+  color: rgba(47,71,103,0.2);
   min-width: 36px;
   transition: all 0.3s ease;
 }
@@ -675,10 +675,10 @@
   gap: 48px;
 }
 .step-item {
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 3px 16px rgba(0,0,0,0.05);
-  background: white;
+  background: #FCFCFC;
 }
 .step-item img {
   width: 100%;
@@ -692,14 +692,12 @@
   align-items: start;
 }
 .step-item .step-num {
-  font-family: 'Fraunces', serif;
+  font-family: Georgia, 'Songti SC', serif;
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
-  color: rgba(43,127,216,0.15);
+  color: rgba(47,71,103,0.15);
 }
-.step-item:nth-child(3n+2) .step-num { color: rgba(244,215,88,0.35); }
-.step-item:nth-child(3n) .step-num { color: rgba(232,74,95,0.2); }
 .step-item .step-info h4 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.3rem;
@@ -734,4 +732,4 @@ const stepObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.step-observe').forEach(el => stepObserver.observe(el));
 ```
 
-⚠️ 注意：步骤5~10个最合适。超过10个太长，少于5个用横向Step连接线（#7）更紧凑。大图是关键——每一步都必须有一张占满宽度的配图。编号三色轮换（蓝/黄/红）保持节奏。移动端侧栏隐藏，变成纯纵向滚动。
+⚠️ 注意：步骤5~10个最合适。超过10个太长，少于5个用横向Step连接线（#7）更紧凑。大图是关键——每一步都必须有一张占满宽度的配图。编号统一藏青，克制。移动端侧栏隐藏，变成纯纵向滚动。

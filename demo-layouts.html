@@ -4,17 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout Playground · 16种布局模式预览</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --ink: #1A1A2E;
-      --ink-light: #4a4a5a;
-      --ink-faint: #8a8a9a;
-      --preview-bg: #FFF8E1;
+    /* === CSS变量（Token 体系，与 brand-dna.md 同步）=== */
+    :root { --_kai-ds: "jokerwon-v1";
+      /* ===== 基础 Token 层（主题变更只改这里） ===== */
+      --c-base: #FCFCFC;
+      --c-primary: #2F4767;
+      --c-primary-deep: #243C6C;
+      --c-primary-bright: #3C546C;
+      --c-accent: #FAD470;
+      --c-accent-soft: rgba(250, 212, 112, 0.18);
+      --c-ink: #2A2624;
+      --c-text: #303A43;
+      --c-text-faint: rgba(48, 58, 67, 0.55);
+      --c-warm: #F3C7A1;
+      --c-warm-deep: #F3BB99;
+      --c-warm-soft: rgba(243, 199, 161, 0.12);
+      --c-line: #0C0C0C;
+      /* ===== 语义别名层（旧变量名兼容） ===== */
+      --yellow: var(--c-accent);
+      --yellow-soft: var(--c-accent-soft);
+      --blue: var(--c-primary);
+      --blue-deep: var(--c-primary-deep);
+      --red: var(--c-warm-deep);
+      --cream: var(--c-base);
+      --cream-dark: var(--c-warm-soft);
+      --ink: var(--c-ink);
+      --ink-light: var(--c-text);
+      --ink-faint: var(--c-text-faint);
+      --dark-panel: var(--c-primary-deep);
+      /* ===== 布局预览派生变量 ===== */
+      --preview-bg: var(--c-warm-soft);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,7 +43,7 @@
     body {
       background: var(--cream);
       color: var(--ink);
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: 'Noto Sans SC', -apple-system, sans-serif;
       line-height: 1.6;
     }
 
@@ -32,7 +53,7 @@
       top: 0;
       z-index: 100;
       background: var(--cream);
-      border-bottom: 1px solid rgba(26,26,46,0.08);
+      border-bottom: 1px solid rgba(42,38,36,0.08);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
@@ -56,7 +77,7 @@
       margin-left: -8px;
     }
     .top-nav h1 {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--ink);
@@ -65,7 +86,7 @@
     .top-nav h1 span {
       color: var(--ink-faint);
       font-weight: 400;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Noto Sans SC', sans-serif;
       font-size: 0.85rem;
       margin-left: 8px;
     }
@@ -88,15 +109,15 @@
       margin-bottom: 1rem;
     }
     .layout-header h2 {
-      font-family: 'Noto Serif SC', 'Fraunces', serif;
+      font-family: 'Noto Serif SC', Georgia, serif;
       font-size: 1.2rem;
       font-weight: 700;
       display: inline;
-      background: linear-gradient(transparent 60%, #F4D758 60%);
+      background: linear-gradient(transparent 60%, var(--yellow) 60%);
       padding: 0 4px;
     }
     .layout-header h2 .num {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       color: var(--blue);
       margin-right: 6px;
     }
@@ -107,7 +128,7 @@
       border-radius: 16px;
       padding: clamp(1.5rem, 3vw, 2.5rem);
       overflow: hidden;
-      border: 1px solid rgba(244,215,88,0.3);
+      border: 1px solid rgba(250,212,112,0.3);
     }
 
     /* === Scene Tag === */
@@ -123,7 +144,7 @@
       content: '适用';
       font-size: 0.7rem;
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       padding: 2px 6px;
       border-radius: 3px;
       font-weight: 600;
@@ -136,7 +157,7 @@
     /* Shared placeholder styles */
     .ph-text {
       height: 10px;
-      background: rgba(26,26,46,0.12);
+      background: rgba(42,38,36,0.12);
       border-radius: 4px;
       margin-bottom: 6px;
     }
@@ -151,7 +172,7 @@
       width: 50%;
     }
     .ph-img {
-      background: rgba(43,127,216,0.1);
+      background: rgba(47,71,103,0.1);
       border-radius: 8px;
       min-height: 60px;
       display: flex;
@@ -190,14 +211,14 @@
       gap: 24px;
     }
     .mini-sticky .side {
-      border-right: 2px solid rgba(43,127,216,0.15);
+      border-right: 2px solid rgba(47,71,103,0.15);
       padding-right: 16px;
     }
     .mini-sticky .side .num {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 2rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.2);
+      color: rgba(47,71,103,0.2);
     }
 
     /* 3. 三等分卡片 */
@@ -207,7 +228,7 @@
       gap: 12px;
     }
     .mini-grid3 .card {
-      background: #fff;
+      background: var(--cream);
       border-radius: 10px;
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -215,7 +236,7 @@
     .mini-grid3 .card-icon {
       width: 28px; height: 28px;
       border-radius: 6px;
-      background: rgba(43,127,216,0.12);
+      background: rgba(47,71,103,0.12);
       margin-bottom: 8px;
     }
 
@@ -243,11 +264,11 @@
       width: 32px; height: 32px;
       border-radius: 50%;
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 0.8rem;
       font-weight: 700;
     }
@@ -262,7 +283,7 @@
       left: 50%;
       top: 0; bottom: 0;
       width: 2px;
-      background: rgba(43,127,216,0.15);
+      background: rgba(47,71,103,0.15);
     }
     .mini-timeline-center .item {
       display: grid;
@@ -272,7 +293,7 @@
     }
     .mini-timeline-center .item:last-child { margin-bottom: 0; }
     .mini-timeline-center .item .block {
-      background: #fff;
+      background: var(--cream);
       border-radius: 8px;
       padding: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -282,8 +303,8 @@
 
     /* 6. 全宽深色面板 */
     .mini-dark {
-      background: #151821;
-      color: #e2e8f0;
+      background: var(--dark-panel);
+      color: #FCFCFC;
       border-radius: 12px;
       padding: 2rem;
       text-align: center;
@@ -319,11 +340,11 @@
       width: 40px; height: 40px;
       border-radius: 50%;
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 0.85rem;
       font-weight: 700;
       position: relative;
@@ -343,10 +364,10 @@
       min-height: 180px;
     }
     .mini-hero-center .card {
-      background: #fff;
+      background: var(--cream);
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 4px 24px rgba(26,26,46,0.08);
+      box-shadow: 0 4px 24px rgba(42,38,36,0.08);
       max-width: 400px;
       width: 100%;
       text-align: center;
@@ -363,7 +384,7 @@
     .mini-hero-vert .avatar {
       width: 64px; height: 64px;
       border-radius: 50%;
-      background: rgba(43,127,216,0.12);
+      background: rgba(47,71,103,0.12);
       margin-bottom: 12px;
       display: flex;
       align-items: center;
@@ -377,7 +398,7 @@
     }
     .mini-hero-vert .tag {
       font-size: 0.65rem;
-      background: rgba(43,127,216,0.08);
+      background: rgba(47,71,103,0.08);
       color: var(--blue);
       padding: 3px 8px;
       border-radius: 10px;
@@ -390,7 +411,7 @@
       gap: 10px;
     }
     .mini-autogrid .card {
-      background: #fff;
+      background: var(--cream);
       border-radius: 8px;
       padding: 14px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.04);
@@ -404,7 +425,7 @@
     /* 11. 品牌色面板 */
     .mini-accent {
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       border-radius: 12px;
       padding: 2rem;
       text-align: center;
@@ -437,13 +458,13 @@
     .mini-hscroll .card {
       flex: 0 0 180px;
       scroll-snap-align: start;
-      background: #fff;
+      background: var(--cream);
       border-radius: 10px;
       padding: 16px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     .mini-hscroll .card .year {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 1.2rem;
       color: var(--blue);
       opacity: 0.6;
@@ -462,7 +483,7 @@
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
-      background: #fff;
+      background: var(--cream);
     }
     .mini-split .left h3 {
       font-family: 'Noto Serif SC', serif;
@@ -470,7 +491,7 @@
       color: var(--red);
     }
     .mini-split .right {
-      background: rgba(244,215,88,0.15);
+      background: rgba(250,212,112,0.15);
       padding: 1.5rem;
       display: flex;
       align-items: center;
@@ -519,7 +540,7 @@
       font-weight: 600;
     }
     .mini-tab .tab-panel {
-      background: #fff;
+      background: var(--cream);
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -529,14 +550,14 @@
     .mini-canvas {
       position: relative;
       height: 200px;
-      background-image: radial-gradient(circle, rgba(43,127,216,0.13) 1.2px, transparent 1.2px);
+      background-image: radial-gradient(circle, rgba(47,71,103,0.13) 1.2px, transparent 1.2px);
       background-size: 20px 20px;
       border-radius: 12px;
       overflow: hidden;
     }
     .mini-canvas .float-card {
       position: absolute;
-      background: #fff;
+      background: var(--cream);
       border-radius: 8px;
       padding: 10px 14px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
@@ -565,10 +586,10 @@
       gap: 6px;
     }
     .mini-sticky-mag .sidebar ul li .snum {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 1rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.15);
+      color: rgba(47,71,103,0.15);
       min-width: 24px;
     }
     .mini-sticky-mag .sidebar ul li.active {
@@ -579,7 +600,7 @@
       color: var(--blue);
     }
     .mini-sticky-mag .steps-col .step-card {
-      background: #fff;
+      background: var(--cream);
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 12px;
@@ -588,7 +609,7 @@
     .mini-sticky-mag .steps-col .step-card:last-child { margin-bottom: 0; }
     .mini-sticky-mag .steps-col .step-card .img-area {
       height: 50px;
-      background: rgba(43,127,216,0.06);
+      background: rgba(47,71,103,0.06);
     }
     .mini-sticky-mag .steps-col .step-card .card-body {
       padding: 10px 14px;
@@ -597,16 +618,16 @@
       gap: 10px;
     }
     .mini-sticky-mag .steps-col .step-card .card-body .snum {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-size: 1.5rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.15);
+      color: rgba(47,71,103,0.15);
     }
     .mini-sticky-mag .steps-col .step-card:nth-child(2) .card-body .snum {
-      color: rgba(244,215,88,0.4);
+      color: rgba(250,212,112,0.4);
     }
     .mini-sticky-mag .steps-col .step-card:nth-child(3) .card-body .snum {
-      color: rgba(232,74,95,0.2);
+      color: rgba(243,199,161,0.2);
     }
 
     /* === Responsive === */
@@ -701,13 +722,13 @@
           <div class="ph-text xshort"></div>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(244,215,88,0.2)"></div>
+          <div class="card-icon" style="background:rgba(250,212,112,0.2)"></div>
           <div class="ph-heading" style="width:70%"></div>
           <div class="ph-text medium"></div>
           <div class="ph-text short"></div>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(232,74,95,0.12)"></div>
+          <div class="card-icon" style="background:rgba(243,199,161,0.12)"></div>
           <div class="ph-heading" style="width:50%"></div>
           <div class="ph-text short"></div>
           <div class="ph-text xshort"></div>
@@ -1018,7 +1039,7 @@
 <!-- Bottom tri-color bar -->
 <div class="tri-bar"><span></span><span></span><span></span></div>
 
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- Based on esther-design-system by ESTHER不二 (esthersjw), CC BY-NC-SA 4.0. Modifications by Kai (jokerwon). -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">kai-design-system</section>
 </body>
 </html>

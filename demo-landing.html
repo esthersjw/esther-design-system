@@ -6,21 +6,36 @@
   <title>AI 创作者之夜 — 人与AI共创的分享会</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,900;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* === CSS变量 === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --cream-dark: #faf6eb;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
+    /* === CSS变量（Token 体系，与 brand-dna.md 同步）=== */
+    :root { --_kai-ds: "jokerwon-v1";
+      /* ===== 基础 Token 层（主题变更只改这里） ===== */
+      --c-base: #FCFCFC;
+      --c-primary: #2F4767;
+      --c-primary-deep: #243C6C;
+      --c-primary-bright: #3C546C;
+      --c-accent: #FAD470;
+      --c-accent-soft: rgba(250, 212, 112, 0.18);
+      --c-ink: #2A2624;
+      --c-text: #303A43;
+      --c-text-faint: rgba(48, 58, 67, 0.55);
+      --c-warm: #F3C7A1;
+      --c-warm-deep: #F3BB99;
+      --c-warm-soft: rgba(243, 199, 161, 0.12);
+      --c-line: #0C0C0C;
+      /* ===== 语义别名层（旧变量名兼容） ===== */
+      --yellow: var(--c-accent);
+      --yellow-soft: var(--c-accent-soft);
+      --blue: var(--c-primary);
+      --blue-deep: var(--c-primary-deep);
+      --red: var(--c-warm-deep);
+      --cream: var(--c-base);
+      --cream-dark: var(--c-warm-soft);
+      --ink: var(--c-ink);
+      --ink-light: var(--c-text);
+      --ink-faint: var(--c-text-faint);
+      --dark-panel: var(--c-primary-deep);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,9 +65,9 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       padding: 1rem 2rem;
-      background: rgba(254,252,246,.85);
+      background: rgba(252,252,252,.85);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(26,26,26,.06);
+      border-bottom: 1px solid rgba(42,38,36,.06);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -61,7 +76,7 @@
       box-shadow: 0 2px 20px rgba(0,0,0,.06);
     }
     .nav-logo {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-weight: 900;
       font-size: 1.1rem;
       color: var(--ink);
@@ -107,7 +122,7 @@
       top: -20%; right: -10%;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(244,215,88,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(250,212,112,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero::after {
@@ -116,12 +131,12 @@
       bottom: -10%; left: -5%;
       width: 400px; height: 400px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(43,127,216,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(47,71,103,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
     .hero .label-caps {
-      font-family: 'Fira Code', monospace;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
@@ -139,7 +154,7 @@
       position: relative;
     }
     .hero h1 .hl {
-      background: linear-gradient(transparent 60%, rgba(244,215,88,0.4) 60%);
+      background: linear-gradient(transparent 60%, rgba(250,212,112,0.4) 60%);
       padding: 0 6px;
     }
 
@@ -177,7 +192,7 @@
       margin-bottom: clamp(40px, 6vw, 80px);
     }
     .section-number {
-      font-family: 'Fraunces', serif;
+      font-family: Georgia, 'Songti SC', serif;
       font-style: italic;
       font-size: clamp(1.4rem, 3vw, 2rem);
       color: var(--blue);
@@ -198,8 +213,8 @@
       gap: clamp(20px, 2.5vw, 32px);
     }
     .speaker-card {
-      background: #fff;
-      border-radius: 20px;
+      background: var(--cream);
+      border-radius: 12px;
       padding: clamp(28px, 3vw, 40px);
       position: relative;
       overflow: hidden;
@@ -228,9 +243,9 @@
       justify-content: center;
       font-size: 1.8rem;
     }
-    .speaker-card:nth-child(1) .speaker-avatar { background: rgba(43,127,216,0.08); }
-    .speaker-card:nth-child(2) .speaker-avatar { background: rgba(244,215,88,0.15); }
-    .speaker-card:nth-child(3) .speaker-avatar { background: rgba(232,74,95,0.08); }
+    .speaker-card:nth-child(1) .speaker-avatar { background: rgba(47,71,103,0.08); }
+    .speaker-card:nth-child(2) .speaker-avatar { background: rgba(250,212,112,0.15); }
+    .speaker-card:nth-child(3) .speaker-avatar { background: rgba(243,199,161,0.08); }
 
     .speaker-name {
       font-family: 'Noto Serif SC', serif;
@@ -259,8 +274,8 @@
     .highlight-card {
       display: flex;
       align-items: stretch;
-      background: #fff;
-      border-radius: 16px;
+      background: var(--cream);
+      border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 16px rgba(0,0,0,0.04);
     }
@@ -271,10 +286,10 @@
       justify-content: center;
       font-size: 1.8rem;
     }
-    .highlight-card:nth-child(1) .highlight-icon { background: rgba(43,127,216,0.06); }
-    .highlight-card:nth-child(2) .highlight-icon { background: rgba(244,215,88,0.12); }
-    .highlight-card:nth-child(3) .highlight-icon { background: rgba(232,74,95,0.06); }
-    .highlight-card:nth-child(4) .highlight-icon { background: rgba(43,127,216,0.06); }
+    .highlight-card:nth-child(1) .highlight-icon { background: rgba(47,71,103,0.06); }
+    .highlight-card:nth-child(2) .highlight-icon { background: rgba(250,212,112,0.12); }
+    .highlight-card:nth-child(3) .highlight-icon { background: rgba(243,199,161,0.06); }
+    .highlight-card:nth-child(4) .highlight-icon { background: rgba(47,71,103,0.06); }
     .highlight-content {
       flex: 1;
       padding: 20px 24px;
@@ -318,13 +333,13 @@
       margin-top: 1.5rem;
       font-size: 0.82rem;
       opacity: 0.5;
-      font-family: 'Fira Code', monospace;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
     }
 
     /* === 品牌色面板（时间线） === */
     .brand-section {
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       padding: clamp(80px, 12vh, 160px) 0;
       position: relative;
       overflow: hidden;
@@ -335,14 +350,14 @@
       top: -50%; right: -10%;
       width: 600px; height: 600px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.04);
+      background: rgba(252,252,252,0.04);
       pointer-events: none;
     }
     .brand-section .section-header .section-number {
-      color: rgba(255,255,255,0.4);
+      color: rgba(252,252,252,0.4);
     }
     .brand-section .section-header .section-title {
-      color: #fff;
+      color: #FCFCFC;
     }
 
     .timeline-list {
@@ -357,7 +372,7 @@
       left: 12px;
       top: 8px; bottom: 8px;
       width: 2px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(252,252,252,0.2);
     }
     .timeline-item {
       position: relative;
@@ -372,10 +387,10 @@
       width: 12px; height: 12px;
       border-radius: 50%;
       background: var(--yellow);
-      border: 2px solid rgba(255,255,255,0.3);
+      border: 2px solid rgba(252,252,252,0.3);
     }
     .timeline-time {
-      font-family: 'Fira Code', monospace;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
       font-size: 0.75rem;
       opacity: 0.7;
       margin-bottom: 4px;
@@ -396,20 +411,19 @@
     .viral-pullquote {
       padding: 36px 40px;
       background: var(--cream);
-      border-radius: 16px;
-      border: 2px solid var(--yellow);
+      border-radius: 12px;
+      border: 2px solid var(--c-line);
       position: relative;
       max-width: 720px;
       margin: 0 auto;
     }
     .viral-pullquote::before {
       content: '"';
-      font-family: 'Fraunces', serif;
-      font-size: 5rem;
+      font-family: Georgia, 'Songti SC', serif;
+      font-size: 4rem;
       color: var(--yellow);
       position: absolute;
       top: -10px; left: 20px;
-      opacity: 0.5;
       line-height: 1;
     }
     .viral-pullquote p {
@@ -420,7 +434,7 @@
     }
     .viral-pullquote .quote-source {
       margin-top: 12px;
-      font-family: 'Fira Code', monospace;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
       font-size: 0.75rem;
       color: var(--ink-faint);
     }
@@ -450,7 +464,7 @@
       gap: 8px;
       padding: 16px 36px;
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
@@ -459,7 +473,7 @@
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+      box-shadow: 0 8px 24px rgba(47,71,103,0.3);
     }
     .cta-note {
       margin-top: 1rem;
@@ -569,7 +583,7 @@
   <section class="dark-section">
     <div class="container reveal">
       <p class="quote-text">AI不会取代创作者，但<em>会用AI的创作者</em>会取代不会用的。<br>这不是一句口号，而是我们正在经历的现实。</p>
-      <p class="quote-attr">— 本次活动发起人 · 不二</p>
+      <p class="quote-attr">— 本次活动发起人 · Kai</p>
     </div>
   </section>
 
@@ -675,7 +689,7 @@
 
   <!-- ====== Footer ====== -->
   <footer class="footer">
-    <p>AI 创作者之夜 © 2026 · 由不二发起 · Powered by Esther Design System</p>
+    <p>AI 创作者之夜 © 2026 · 由 Kai 发起 · Powered by KAI Design System</p>
   </footer>
 
   <!-- ====== Scripts ====== -->
@@ -696,7 +710,7 @@
       document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 40);
     });
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- Based on esther-design-system by ESTHER不二 (esthersjw), CC BY-NC-SA 4.0. Modifications by Kai (jokerwon). -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">kai-design-system</section>
 </body>
 </html>

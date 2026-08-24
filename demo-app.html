@@ -8,17 +8,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* === CSS变量 === */
-    :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --card-bg: #fff;
-      --border: rgba(26,26,26,.08);
+    /* === CSS变量（Token 体系，与 brand-dna.md 同步）=== */
+    :root { --_kai-ds: "jokerwon-v1";
+      /* ===== 基础 Token 层（主题变更只改这里） ===== */
+      --c-base: #FCFCFC;
+      --c-primary: #2F4767;
+      --c-primary-deep: #243C6C;
+      --c-primary-bright: #3C546C;
+      --c-accent: #FAD470;
+      --c-accent-soft: rgba(250, 212, 112, 0.18);
+      --c-ink: #2A2624;
+      --c-text: #303A43;
+      --c-text-faint: rgba(48, 58, 67, 0.55);
+      --c-warm: #F3C7A1;
+      --c-warm-deep: #F3BB99;
+      --c-warm-soft: rgba(243, 199, 161, 0.12);
+      --c-line: #0C0C0C;
+      /* ===== 语义别名层（旧变量名兼容） ===== */
+      --yellow: var(--c-accent);
+      --yellow-soft: var(--c-accent-soft);
+      --blue: var(--c-primary);
+      --blue-deep: var(--c-primary-deep);
+      --red: var(--c-warm-deep);
+      --cream: var(--c-base);
+      --cream-dark: var(--c-warm-soft);
+      --ink: var(--c-ink);
+      --ink-light: var(--c-text);
+      --ink-faint: var(--c-text-faint);
+      --dark-panel: var(--c-primary-deep);
+      /* ===== App 场景派生变量 ===== */
+      --card-bg: var(--c-base);
+      --border: rgba(42, 38, 36, 0.08);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +56,7 @@
       color: var(--ink);
     }
 
-    /* === 三色装饰条 === */
+    /* === 品牌装饰条（藏青 + 姜黄 + 暖辅） === */
     body::before {
       content: '';
       position: fixed;
@@ -118,7 +138,7 @@
       height: 32px;
       border-radius: 50%;
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -131,7 +151,7 @@
       display: flex;
       gap: 4px;
       overflow-x: auto;
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid var(--border);
       padding: 0 1.5rem;
       background: var(--cream);
       position: sticky;
@@ -240,24 +260,24 @@
       padding: 2px 8px;
       border-radius: 8px;
       font-size: 0.7rem;
-      background: rgba(43,127,216,0.1);
+      background: rgba(47,71,103,0.1);
       color: var(--blue);
       margin-bottom: 0.5rem;
     }
 
     .card-badge.yellow {
-      background: rgba(244,215,88,0.2);
-      color: #9a8400;
+      background: rgba(250,212,112,0.2);
+      color: var(--ink-light);
     }
 
     .card-badge.red {
-      background: rgba(232,74,95,0.1);
-      color: var(--red);
+      background: rgba(243,199,161,0.15);
+      color: var(--ink-light);
     }
 
     .card-badge.green {
-      background: rgba(40,167,69,0.1);
-      color: #28a745;
+      background: rgba(60,84,108,0.1);
+      color: var(--blue-deep);
     }
 
     /* === 卡片内列表 === */
@@ -296,7 +316,7 @@
 
     .card-list .check.done::after {
       content: '✓';
-      color: #fff;
+      color: #FCFCFC;
       font-size: 10px;
       position: absolute;
       top: 50%;
@@ -370,7 +390,7 @@
       justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
-      background: rgba(43,127,216,0.08);
+      background: rgba(47,71,103,0.08);
     }
 
     .list-item-body {
@@ -483,7 +503,7 @@
 
     .modal-content {
       background: var(--cream);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 2rem;
       max-width: 560px;
       width: 90%;
@@ -531,13 +551,13 @@
     .app-input:focus {
       outline: none;
       border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(43,127,216,0.1);
+      box-shadow: 0 0 0 3px rgba(47,71,103,0.1);
     }
 
     /* === 按钮 === */
     .btn-primary {
       background: var(--blue);
-      color: #fff;
+      color: #FCFCFC;
       border: none;
       border-radius: 8px;
       padding: 10px 20px;
@@ -895,7 +915,7 @@
 
   <!-- ====== Footer ====== -->
   <footer class="app-footer">
-    Esther Design System · App Demo · 仅供展示
+    KAI Design System · App Demo · 仅供展示
   </footer>
 
   <!-- ====== Modal: 新建任务 ====== -->
@@ -937,7 +957,7 @@
       if (e.target === e.currentTarget) closeModal();
     });
   </script>
-<!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
-<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
+<!-- Based on esther-design-system by ESTHER不二 (esthersjw), CC BY-NC-SA 4.0. Modifications by Kai (jokerwon). -->
+<section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">kai-design-system</section>
 </body>
 </html>
